@@ -1,0 +1,15 @@
+button.icon-button-1 {
+    background-color:rgba(22,22,22,0.5);
+    color: var(--background-color);
+    border: none;
+    width:  4em;
+    height: 4em;
+    border-radius: 50%;
+    cursor:pointer;
+    transition: border 0.2s ease-in-out;
+    border: .2em solid transparent;
+}
+
+button.icon-button-1:hover {
+    border: .2em solid white;
+}

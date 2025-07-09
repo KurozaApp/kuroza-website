@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --primary-color: #e60000;
+    --primary-color-shade: #b30000;
+    --secondary-color: #7a7a7a;
+    --background-color: #f0f0f0;
+}
+
+/* Global reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+
+    height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+header .top-blob {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+header .bottom-blob {
+    position: absolute;
+    top: calc(100vh - 4rem);
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+}
+header.middle-blob {
+    display:none;
+}
+header .top-blob svg,
+header .bottom-blob svg {
+    width: 100%;
+    height: auto;
+    @media (min-width: 768px) {
+        display:none
+    }
+}
+@media (min-width: 768px) {
+    header .middle-blob {
+        display: flex;
+        width:100vw;
+        height:100vh;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 0;
+        margin-top:4em;
+    }
+    header .middle-blob svg {
+        width: 20vw;
+        height: auto;
+    }
+}
+
+header .title {
+    text-align: center;
+    z-index:1;
+}
+header h1 {
+    font-size: 2.5rem;
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
+}
+header sub {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
+    animation-delay: 0.7s;
+}
+
+header .button {
+    position:relative;
+    top: 5rem;
+    opacity: 0;
+    animation: fadeIn .5s ease-in-out forwards;
+    animation-delay: 2.1s;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1em;
+}
+
+main .hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 2em;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    gap:1em;
+}
+
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

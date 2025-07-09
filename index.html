@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuroza</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="components.css">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="top-blob">
+            <svg width="390" height="55" viewBox="0 0 390 55" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.32" d="M421.351 8.99999C421.351 77.1961 248.896 49.6572 160.896 45.02C8.49994 36.9894 -180.649 53.02 -180.649 8.99999C-180.649 -59.1961 55.4021 -114.48 185.602 -114.48C315.802 -114.48 421.351 -59.1961 421.351 8.99999Z" fill="white"/>
+            </svg>
+        </div>
+        <div class="title">
+            <h1>Kuroza</h1>
+            <sub>Social made simple.</sub>
+        </div>
+        <div class="middle-blob">
+            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <path fill="#EE5252" d="M41.8,-73C53.2,-65.8,60.7,-52.6,67.1,-39.4C73.5,-26.3,78.8,-13.1,80.8,1.1C82.7,15.4,81.4,30.8,74.3,42.8C67.2,54.8,54.4,63.4,41,68.6C27.7,73.8,13.9,75.7,-1,77.4C-15.8,79.1,-31.6,80.5,-45.9,75.9C-60.2,71.2,-73.1,60.4,-81.7,46.7C-90.4,33.1,-94.8,16.5,-89.9,2.8C-85,-10.9,-70.7,-21.7,-62.2,-35.6C-53.7,-49.6,-50.9,-66.5,-41.5,-74.8C-32.1,-83.2,-16.1,-82.9,-0.4,-82.2C15.2,-81.4,30.4,-80.3,41.8,-73Z" transform="translate(100 100)" />
+            </svg>
+        </div>
+        <div class="button">
+            Read more
+            <button class="icon-button-1" id="header-scroll-down">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="bottom-blob">
+            <svg width="390" height="63" viewBox="0 0 390 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.32" d="M462.103 109.788C500.49 215.254 224.098 196.415 91.839 244.553C-40.4201 292.691 -188.661 124.049 -93.9311 80.5664C-41.4999 56.5 102.203 0.194959 222.479 0.195044C343.5 0.195119 438.935 46.1333 462.103 109.788Z" fill="white"/>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Website coming soon!</h1>
+            <!-- <h2>Welcome to Kuroza</h2>
+            <p>Your one-stop solution for social networking.</p>
+            <p>Ever have trouble planning group meetups and keeping in touch regularly with friends?</p>
+            <p>With Kuroza, you can easily plan events, share updates, and stay connected with your friends.</p>
+            <button class="icon-button-1" onclick="scrollToSection('.features');">
+                <i class="fa-solid fa-arrow-down"></i>
+            </button> -->
+        </section>
+        <!-- <section class="features">
+            <h3>Features</h3>
+            <ul>
+                <li>Easy to use interface</li>
+                <li>Automated AI-Drive Events Suggestion</li>
+                <li>Customizable profiles</li>
+                <li>Customizable profiles</li>
+            </ul>
+        </section> -->
+    </main>
+    
+    <footer>
+        <p>Follow us on:</p>
+        <p>&copy; 2023 Kuroza. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function scrollToSection(querySelectorLocation) {
+            const element = document.querySelector(querySelectorLocation);
+            if (!element) {
+                console.error(`Element with selector ${querySelectorLocation} not found.`);
+                return;
+            }
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+
+
+        // Example of using the scrollToSection function
+        document.getElementById('header-scroll-down').addEventListener('click', () => {
+            scrollToSection('main');
+        });
+    </script>
+</body>
+</html>
