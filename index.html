@@ -3,85 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuroza</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="components.css">    
-    
-    <link rel="shortcut icon" href="/assets/Kuroza Icon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-</head>
-<body>
-    <header>
-        <div class="top-blob">
-            <svg width="390" height="55" viewBox="0 0 390 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.32" d="M421.351 8.99999C421.351 77.1961 248.896 49.6572 160.896 45.02C8.49994 36.9894 -180.649 53.02 -180.649 8.99999C-180.649 -59.1961 55.4021 -114.48 185.602 -114.48C315.802 -114.48 421.351 -59.1961 421.351 8.99999Z" fill="white"/>
-            </svg>
-        </div>
-        <div class="title">
-            <h1>Kuroza</h1>
-            <sub>Social made simple.</sub>
-        </div>
-        <div class="middle-blob">
-            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <path fill="#EE5252" d="M41.8,-73C53.2,-65.8,60.7,-52.6,67.1,-39.4C73.5,-26.3,78.8,-13.1,80.8,1.1C82.7,15.4,81.4,30.8,74.3,42.8C67.2,54.8,54.4,63.4,41,68.6C27.7,73.8,13.9,75.7,-1,77.4C-15.8,79.1,-31.6,80.5,-45.9,75.9C-60.2,71.2,-73.1,60.4,-81.7,46.7C-90.4,33.1,-94.8,16.5,-89.9,2.8C-85,-10.9,-70.7,-21.7,-62.2,-35.6C-53.7,-49.6,-50.9,-66.5,-41.5,-74.8C-32.1,-83.2,-16.1,-82.9,-0.4,-82.2C15.2,-81.4,30.4,-80.3,41.8,-73Z" transform="translate(100 100)" />
-            </svg>
-        </div>
-        <div class="button">
-            Read more
-            <button class="icon-button-1" id="header-scroll-down">
-                <i class="fa-solid fa-arrow-down"></i>
-            </button>
-        </div>
-        <div class="bottom-blob">
-            <svg width="390" height="63" viewBox="0 0 390 63" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.32" d="M462.103 109.788C500.49 215.254 224.098 196.415 91.839 244.553C-40.4201 292.691 -188.661 124.049 -93.9311 80.5664C-41.4999 56.5 102.203 0.194959 222.479 0.195044C343.5 0.195119 438.935 46.1333 462.103 109.788Z" fill="white"/>
-            </svg>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Website coming soon!</h1>
-            <!-- <h2>Welcome to Kuroza</h2>
-            <p>Your one-stop solution for social networking.</p>
-            <p>Ever have trouble planning group meetups and keeping in touch regularly with friends?</p>
-            <p>With Kuroza, you can easily plan events, share updates, and stay connected with your friends.</p>
-            <button class="icon-button-1" onclick="scrollToSection('.features');">
-                <i class="fa-solid fa-arrow-down"></i>
-            </button> -->
-        </section>
-        <!-- <section class="features">
-            <h3>Features</h3>
-            <ul>
-                <li>Easy to use interface</li>
-                <li>Automated AI-Drive Events Suggestion</li>
-                <li>Customizable profiles</li>
-                <li>Customizable profiles</li>
-            </ul>
-        </section> -->
-    </main>
-    
-    <footer>
-        <p>Follow us on:</p>
-        <p>&copy; 2023 Kuroza. All rights reserved.</p>
-    </footer>
-    
+    <title>Kuroza - Smart Social Planning</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./Kuroza Icon.png" type="image/x-icon">
     <script>
-        function scrollToSection(querySelectorLocation) {
-            const element = document.querySelector(querySelectorLocation);
-            if (!element) {
-                console.error(`Element with selector ${querySelectorLocation} not found.`);
-                return;
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'quicksand': ['Quicksand', 'sans-serif'],
+                    },
+                    colors: {
+                        'kuroza-red': '#e60000',
+                        'kuroza-dark-red': '#cc0000',
+                    }
+                }
             }
-            element.scrollIntoView({ behavior: 'smooth' });
         }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+        .light-bg {
+            background: linear-gradient(135deg, #efe8e8 0%, #eee 50%, #f8f8f8 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #e60000, #ff4444);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .red-bg {
+            background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
+        }
+    </style>
+</head>
+<body class="light-bg font-quicksand text-gray-800 min-h-screen">
+    <!-- Header -->
+    <header class="relative z-50 px-6 py-6">
+        <nav class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-bold text-gradient">Kuroza</a>
+            <ul class="hidden md:flex space-x-8">
+                <li><a href="#features" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Features</a></li>
+                <li><a href="/about" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">About</a></li>
+                <li><a href="/contact" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="relative px-6 py-20 text-center">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-72 h-72 bg-kuroza-red/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-kuroza-red/5 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <h1 class="text-6xl md:text-8xl font-bold mb-6 leading-tight text-gray-800">
+                Smart Social
+                <span class="text-gradient block">Planning</span>
+            </h1>
+            
+            <p class="text-2xl text-gray-600 mb-8 font-light max-w-3xl mx-auto">
+                The advanced event suggestion algorithm for seamless group meetups
+            </p>
+            
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations. Never struggle with planning again.
+            </p>
+            
+            <!-- CTA Button -->
+            <div class="mb-8">
+                <button 
+                    onclick="learnMore()"
+                    class="px-12 py-5 bg-kuroza-red hover:bg-kuroza-dark-red text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-xl"
+                >
+                    Learn More
+                </button>
+            </div>
+            
+            <p class="text-gray-500 text-sm mb-20">
+                🚀 Revolutionary social planning technology
+            </p>
+        </div>
+    </section>
 
-        // Example of using the scrollToSection function
-        document.getElementById('header-scroll-down').addEventListener('click', () => {
-            scrollToSection('main');
+    <!-- Features Section -->
+    <section id="features" class="px-6 py-20 bg-white/50 backdrop-blur-sm border-y border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold mb-6 text-gray-800">Why Choose Kuroza?</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Revolutionary features that make group planning effortless and enjoyable
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="card-hover bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-gray-200 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">🧠</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Smart Algorithm</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our advanced AI analyzes everyone's schedules, preferences, and locations to suggest the perfect meetup times and places automatically.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="card-hover bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-gray-200 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">📅</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Schedule Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Seamlessly sync with your existing calendars and automatically find windows when everyone is available for group activities.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="card-hover bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-gray-200 shadow-lg">
+                    <div class="w-16 h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-6">
+                        <span class="text-2xl">📍</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Smart Locations</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Get personalized venue recommendations based on your group's location, preferences, and the type of activity you want to do.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="px-6 py-20">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 text-gray-800">How Kuroza Works</h2>
+            <p class="text-xl text-gray-600 mb-16 max-w-2xl mx-auto">
+                Three simple steps to perfect group planning
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-2xl font-bold text-kuroza-red">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Share Availability</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Simply input when you are free. Kuroza syncs with you & your friend's calendars for effortless scheduling.
+                    </p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-2xl font-bold text-kuroza-red">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">AI Suggestions</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our algorithm analyzes preferences and creates perfect event suggestions with optimal timing and locations.
+                    </p>
+                </div>
+                
+                <div class="space-y-6">
+                    <div class="w-20 h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-2xl font-bold text-kuroza-red">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-800">Plan & Meet</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Review suggestions, vote on favorites, and confirm your perfect group meetup. It's that simple!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="px-6 py-20 red-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6 text-white">Ready to Transform Group Planning?</h2>
+            <p class="text-xl text-white/90 mb-12 max-w-2xl mx-auto">
+                Join thousands of users who are already experiencing effortless social coordination with Kuroza.
+            </p>
+            
+            <div class="flex mb-8 items-center justify-center gap-4">
+                <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store" style="height: 3.5em; width: auto;"/>
+                <img src="/public/assets/google_play_badge.png" alt="Download on Google Play" style="height: 3.5em; width: auto;"/>
+            </div>
+            
+            <p class="text-white/80 text-sm">
+                ⚡ Experience the future of social planning
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="px-6 py-12 border-t border-gray-200 bg-white">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="text-3xl font-bold text-gradient mb-6">Kuroza</div>
+            <p class="text-gray-600 mb-8">Making group planning effortless, one meetup at a time.</p>
+            <div class="flex justify-center space-x-8 text-gray-600">
+                <a href="/privacy-policy" class="hover:text-kuroza-red transition-colors">Privacy Policy</a>
+                <a href="/terms-of-service" class="hover:text-kuroza-red transition-colors">Terms of Service</a>
+                <a href="/contact" class="hover:text-kuroza-red transition-colors">Contact</a>
+            </div>
+            <p class="text-gray-400 text-sm mt-8">© 2024 Kuroza. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function learnMore() {
+            document.getElementById('features').scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        function getStarted() {
+            // In a real application, this would redirect to the app or sign-up page
+            alert('🚀 Ready to revolutionize your group planning? Contact us to get started!');
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
         });
     </script>
 </body>
