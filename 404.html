@@ -49,108 +49,148 @@
         .pulse-slow {
             animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .mobile-menu.open {
+            transform: translateX(0);
+        }
     </style>
 </head>
 <body class="light-bg font-quicksand text-gray-800 min-h-screen flex flex-col">
     <!-- Header -->
-    <header class="relative z-50 px-6 py-6">
+    <header class="relative z-50 px-4 sm:px-6 py-4 sm:py-6">
         <nav class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="text-3xl font-bold text-gradient flex items-center gap-2">
-                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo" class="w-8 h-8 rounded-lg">
+            <a href="#" class="text-2xl sm:text-3xl font-bold text-gradient flex items-center gap-2">
+                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo" class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg">
                 Kuroza
             </a>
+            
+            <!-- Desktop Navigation -->
             <ul class="hidden md:flex space-x-8">
                 <li><a href="/#features" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Features</a></li>
                 <li><a href="/about" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">About</a></li>
                 <li><a href="/contact" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Contact</a></li>
             </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
         </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-64 h-full bg-white shadow-lg z-50 md:hidden">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-8">
+                    <span class="text-xl font-bold text-gradient">Menu</span>
+                    <button id="close-menu-btn" class="p-2 rounded-lg">
+                        <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="space-y-4">
+                    <li><a href="/#features" class="block py-2 text-gray-600 hover:text-kuroza-red transition-colors font-medium">Features</a></li>
+                    <li><a href="/about" class="block py-2 text-gray-600 hover:text-kuroza-red transition-colors font-medium">About</a></li>
+                    <li><a href="/contact" class="block py-2 text-gray-600 hover:text-kuroza-red transition-colors font-medium">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Overlay -->
+        <div id="menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden md:hidden"></div>
     </header>
 
     <!-- Main 404 Content -->
-    <main class="flex-1 flex items-center justify-center px-6 py-20">
-        <div class="max-w-4xl mx-auto text-center">
+    <main class="flex-1 flex items-center justify-center px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+        <div class="max-w-4xl mx-auto text-center w-full">
             <!-- Background Elements -->
             <div class="absolute inset-0 overflow-hidden pointer-events-none">
-                <div class="absolute top-1/4 left-1/6 w-64 h-64 bg-kuroza-red/5 rounded-full blur-3xl floating-animation"></div>
-                <div class="absolute bottom-1/4 right-1/6 w-80 h-80 bg-kuroza-red/3 rounded-full blur-3xl floating-delay"></div>
+                <div class="absolute top-1/4 left-1/6 w-32 h-32 sm:w-64 sm:h-64 bg-kuroza-red/5 rounded-full blur-3xl floating-animation"></div>
+                <div class="absolute bottom-1/4 right-1/6 w-40 h-40 sm:w-80 sm:h-80 bg-kuroza-red/3 rounded-full blur-3xl floating-delay"></div>
             </div>
             
             <!-- 404 Number -->
-            <div class="relative z-10 mb-8">
-                <h1 class="text-8xl md:text-9xl font-bold text-gradient mb-4 pulse-slow">
+            <div class="relative z-10 mb-6 sm:mb-8">
+                <h1 class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-gradient mb-3 sm:mb-4 pulse-slow">
                     404
                 </h1>
-                <div class="w-32 h-1 bg-kuroza-red mx-auto rounded-full"></div>
+                <div class="w-24 sm:w-32 h-1 bg-kuroza-red mx-auto rounded-full"></div>
             </div>
             
             <!-- Error Message -->
-            <div class="mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+            <div class="mb-8 sm:mb-12 px-2">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 sm:mb-6">
                     Oops! Page Not Found
                 </h2>
-                <p class="text-xl text-gray-600 mb-4 max-w-2xl mx-auto">
+                <p class="text-lg sm:text-xl text-gray-600 mb-3 sm:mb-4 max-w-2xl mx-auto">
                     It looks like this page got lost in the planning process. Don't worry - even our advanced algorithm can't find everything!
                 </p>
-                <p class="text-lg text-gray-500 max-w-xl mx-auto">
+                <p class="text-base sm:text-lg text-gray-500 max-w-xl mx-auto">
                     The page you're looking for might have been moved, deleted, or perhaps never existed.
                 </p>
             </div>
             
             <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12 px-2">
                 <button 
                     onclick="goHome()"
-                    class="px-8 py-4 bg-kuroza-red hover:bg-kuroza-dark-red text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg"
+                    class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-kuroza-red hover:bg-kuroza-dark-red text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-base sm:text-lg"
                 >
                     🏠 Go Home
                 </button>
                 <button 
                     onclick="goBack()"
-                    class="px-8 py-4 bg-white border-2 border-gray-300 hover:border-kuroza-red text-gray-700 hover:text-kuroza-red font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg"
+                    class="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white border-2 border-gray-300 hover:border-kuroza-red text-gray-700 hover:text-kuroza-red font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-base sm:text-lg"
                 >
                     ← Go Back
                 </button>
             </div>
             
             <!-- Helpful Links -->
-            <div class="bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-gray-200 shadow-lg max-w-2xl mx-auto">
-                <h3 class="text-2xl font-bold text-gray-800 mb-6">Maybe you were looking for:</h3>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <a href="/" class="flex items-center space-x-3 p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
-                        <span class="text-2xl">🏠</span>
+            <div class="bg-white/80 backdrop-blur-lg p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-lg max-w-2xl mx-auto">
+                <h3 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">Maybe you were looking for:</h3>
+                <div class="grid sm:grid-cols-2 gap-3 sm:gap-4">
+                    <a href="/" class="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
+                        <span class="text-xl sm:text-2xl">🏠</span>
                         <div class="text-left">
-                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red">Home Page</div>
-                            <div class="text-sm text-gray-600">Learn about Kuroza</div>
+                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red text-sm sm:text-base">Home Page</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Learn about Kuroza</div>
                         </div>
                     </a>
-                    <a href="/#features" class="flex items-center space-x-3 p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
-                        <span class="text-2xl">✨</span>
+                    <a href="/#features" class="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
+                        <span class="text-xl sm:text-2xl">✨</span>
                         <div class="text-left">
-                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red">Features</div>
-                            <div class="text-sm text-gray-600">See what we offer</div>
+                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red text-sm sm:text-base">Features</div>
+                            <div class="text-xs sm:text-sm text-gray-600">See what we offer</div>
                         </div>
                     </a>
-                    <a href="/contact" class="flex items-center space-x-3 p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
-                        <span class="text-2xl">📧</span>
+                    <a href="/contact" class="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
+                        <span class="text-xl sm:text-2xl">📧</span>
                         <div class="text-left">
-                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red">Contact Us</div>
-                            <div class="text-sm text-gray-600">Get in touch</div>
+                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red text-sm sm:text-base">Contact Us</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Get in touch</div>
                         </div>
                     </a>
-                    <a href="/about" class="flex items-center space-x-3 p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
-                        <span class="text-2xl">ℹ️</span>
+                    <a href="/about" class="flex items-center space-x-3 p-3 sm:p-4 bg-gray-50 hover:bg-kuroza-red/5 rounded-xl transition-colors group">
+                        <span class="text-xl sm:text-2xl">ℹ️</span>
                         <div class="text-left">
-                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red">About</div>
-                            <div class="text-sm text-gray-600">Our story</div>
+                            <div class="font-semibold text-gray-800 group-hover:text-kuroza-red text-sm sm:text-base">About</div>
+                            <div class="text-xs sm:text-sm text-gray-600">Our story</div>
                         </div>
                     </a>
                 </div>
             </div>
             
             <!-- Fun Message -->
-            <div class="mt-12 p-6 bg-kuroza-red/10 rounded-2xl border-l-4 border-kuroza-red max-w-xl mx-auto">
-                <p class="text-lg text-gray-700">
+            <div class="mt-8 sm:mt-12 p-4 sm:p-6 bg-kuroza-red/10 rounded-2xl border-l-4 border-kuroza-red max-w-xl mx-auto">
+                <p class="text-base sm:text-lg text-gray-700">
                     <span class="font-semibold">Fun fact:</span> While you're here, our AI is probably helping thousands of groups plan their perfect meetups! 
                     <span class="text-kuroza-red">🤖✨</span>
                 </p>
@@ -159,23 +199,50 @@
     </main>
 
     <!-- Footer -->
-    <footer class="px-6 py-12 border-t border-gray-200 bg-white">
+    <footer class="px-4 sm:px-6 py-8 sm:py-12 border-t border-gray-200 bg-white">
         <div class="max-w-7xl mx-auto text-center">
-            <div class="text-3xl font-bold text-gradient mb-6 flex items-center justify-center gap-2">
-                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo" class="w-8 h-8 rounded-lg">
+            <div class="text-2xl sm:text-3xl font-bold text-gradient mb-4 sm:mb-6 flex items-center justify-center gap-2">
+                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo" class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg">
                 Kuroza
             </div>
-            <p class="text-gray-600 mb-8">Making group planning effortless, one meetup at a time.</p>
-            <div class="flex justify-center space-x-8 text-gray-600">
+            <p class="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base">Making group planning effortless, one meetup at a time.</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-gray-600 text-sm sm:text-base">
                 <a href="/privacy-policy" class="hover:text-kuroza-red transition-colors">Privacy Policy</a>
                 <a href="/terms-of-service" class="hover:text-kuroza-red transition-colors">Terms of Service</a>
                 <a href="/contact" class="hover:text-kuroza-red transition-colors">Contact</a>
             </div>
-            <p class="text-gray-400 text-sm mt-8">© 2024 Kuroza. All rights reserved.</p>
+            <p class="text-gray-400 text-xs sm:text-sm mt-6 sm:mt-8">© 2024 Kuroza. All rights reserved.</p>
         </div>
     </footer>
 
     <script>
+        // Mobile menu functionality
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const menuOverlay = document.getElementById('menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.add('open');
+            menuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            menuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openMobileMenu);
+        closeMenuBtn.addEventListener('click', closeMobileMenu);
+        menuOverlay.addEventListener('click', closeMobileMenu);
+
+        // Close mobile menu when clicking on menu links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+
         function goHome() {
             window.location.href = '/';
         }
@@ -193,7 +260,8 @@
             // Add click effect to the 404 number
             const errorNumber = document.querySelector('h1');
             errorNumber.addEventListener('click', function() {
-                this.style.transform = 'scale(1.1)';
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'transform 0.2s ease';
                 setTimeout(() => {
                     this.style.transform = 'scale(1)';
                 }, 200);
