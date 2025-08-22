@@ -1,5 +1,5 @@
 # Configuration file for netlify 
-
+# Backend stuff
 [build]
 functions = "netlify/functions"
 
@@ -8,12 +8,13 @@ from = "/api/contact"
 to = "/.netlify/functions/contact-discord"
 status = 200
 
-
 [[redirects]]
 from = "/api/join"
 to = "/.netlify/functions/joinus-discord"
 status = 200
 
+
+# Frontend stuff
 [[redirects]]
 from = "/about"
 to = "/about.html"
