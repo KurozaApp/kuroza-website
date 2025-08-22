@@ -30,21 +30,18 @@
     <section class="relative py-16 px-4 overflow-hidden">
         <!-- Background -->
         <div class="absolute inset-0 overflow-hidden -z-10">
-            <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
+            </div>
         </div>
 
         <h1 class="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900">Join Us</h1>
 
         <div class="flex flex-col md:flex-row md:space-x-12 items-start max-w-6xl mx-auto">
-            <form 
-                name="join" 
-                method="POST" 
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                data-netlify-recaptcha="true"
+            <form action="/api/join" method="POST"
                 class="w-full md:w-1/2 flex flex-col space-y-4 bg-white p-6 rounded-lg shadow-lg">
-                
+
                 <div class="hidden"><input name="bot-field" type="text"></div>
 
                 <input type="text" name="name" placeholder="Your Name" required
@@ -56,20 +53,21 @@
                 <textarea name="message" placeholder="Optional Message" rows="5"
                     class="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-kuroza-red focus:outline-none"></textarea>
 
-                <button type="submit"
-                    class="bg-kuroza-red text-white p-3 rounded-md hover:bg-red-700 transition">Join Now</button>
+                <button type="submit" class="bg-kuroza-red text-white p-3 rounded-md hover:bg-red-700 transition">Join
+                    Now</button>
 
-                <div data-netlify-recaptcha="true"></div>
             </form>
 
             <div class="w-full md:w-1/2 mt-8 md:mt-0 text-gray-700 text-base sm:text-lg leading-relaxed">
                 <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">Become Part of Kuroza</h2>
 
                 <p class="mb-3">
-                    We're excited to welcome new members to our community! Whether you're interested in contributing, learning, or collaborating, we'd love to hear from you.
+                    We're excited to welcome new members to our community! Whether you're interested in contributing,
+                    learning, or collaborating, we'd love to hear from you.
                 </p>
                 <p class="mb-3">
-                    Fill out the form with your details, and let us know a bit about yourself. Your information helps us understand how we can best engage and support you.
+                    Fill out the form with your details, and let us know a bit about yourself. Your information helps us
+                    understand how we can best engage and support you.
                 </p>
                 <p class="mb-3">
                     Joining is simple, and you'll be part of a growing team of passionate individuals.
@@ -80,6 +78,15 @@
             </div>
         </div>
     </section>
+    <script>
+        document.querySelector("form[name='contact']").addEventListener("submit", function (e) {
+            const botField = this.querySelector("[name='bot-field']");
+            if (botField.value) {
+                e.preventDefault(); // prevent submission if bot detected
+                console.log("Bot detected");
+            }
+        });
+    </script>
 
     <footer-component />
 </body>
