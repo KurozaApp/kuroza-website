@@ -3,9 +3,6 @@
 [build]
 functions = "netlify/functions"
 
-[[plugins]]
-package="@netlify/plugin-functions-core"
-
 [[redirects]]
 from = "/api/contact"
 to = "/.netlify/functions/contact-discord"
