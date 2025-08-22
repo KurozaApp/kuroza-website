@@ -25,7 +25,7 @@ export async function handler(event) {
       color: 0xff0000, // Red
       fields: [
         { name: "👤 Name", value: name || "_(none)_", inline: true },
-        { name: "📧 Email", value: email || "_(none)_", inline: true },
+        { name: "📧 Email", value: email !== "_(none)_" ? `[${email}](mailto:${email})` : email, inline: true },
         { name: "💬 Message", value: message || "_(none)_", inline: false },
       ],
       timestamp: new Date().toISOString(),
