@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Kuroza</title>
+
+    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+
+    <!-- Components -->
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="/public/scripts/tailwind-config.js"></script>
+</head>
+
+<body class="light-bg font-manrope text-gray-800 min-h-screen">
+    <navbar-component />
+
+    <!-- Hero Section -->
+    <section class="relative py-24 px-4 text-center bg-gray-50 overflow-hidden py-40">
+        <!-- Background -->
+        <div class="absolute inset-0 overflow-hidden -z-10">
+            <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
+            </div>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-gray-900">About Kuroza</h1>
+        <p class="max-w-3xl mx-auto text-lg sm:text-xl text-gray-700 leading-relaxed">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi modi ab ullam nihil accusamus
+            exercitationem expedita amet laboriosam consequatur quia aperiam rem consequuntur odio, iure veritatis vel
+            velit magni doloremque repellendus facilis voluptatum odit. Consectetur aliquam corrupti harum at nemo,
+            temporibus possimus fugit blanditiis quos quae, dolorem ipsa officiis maiores?
+        </p>
+    </section>
+
+    <footer-component />
+</body>
+
+</html>

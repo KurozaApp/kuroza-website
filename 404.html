@@ -1,88 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Page Not Found | Kuroza</title>
 
+    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
 
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+
+    <!-- Components -->
     <script src="/components/navbar.js"></script>
     <script src="/components/footer.js"></script>
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'quicksand': ['Quicksand', 'sans-serif'],
-                    },
-                    colors: {
-                        'kuroza-red': '#e60000',
-                        'kuroza-dark-red': '#cc0000',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-        }
 
-        .light-bg {
-            background: linear-gradient(135deg, #efe8e8 0%, #eee 50%, #f8f8f8 100%);
-        }
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-        .text-gradient {
-            background: linear-gradient(45deg, #e60000, #ff4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-delay {
-            animation: float 6s ease-in-out infinite 2s;
-        }
-
-        @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .pulse-slow {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-        /* Mobile menu styles */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-    </style>
+    <script src="/public/scripts/tailwind-config.js"></script>
 </head>
 
-<body class="light-bg font-quicksand text-gray-800 min-h-screen flex flex-col">
+<body class="light-bg font-manrope text-gray-800 min-h-screen flex flex-col">
     <navbar-component />
 
     <!-- Main 404 Content -->

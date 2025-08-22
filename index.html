@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuroza - Smart Social Planning</title>
 
+    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+
+    <!-- Components -->
     <script src="/components/navbar.js"></script>
     <script src="/components/footer.js"></script>
 
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Open Graph / Social Meta Tags -->
     <meta property="og:title" content="Kuroza - Smart Social Planning">
-    <meta property="og:description" content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
+    <meta property="og:description"
+        content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
     <meta property="og:image" content="https://kuroza.co.uk/public/assets/KurozaBanner.png">
     <meta property="og:url" content="https://kuroza.co.uk/">
     <meta property="og:type" content="website">
@@ -28,107 +34,53 @@
     <!-- Twitter Card Meta -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Kuroza - Smart Social Planning">
-    <meta name="twitter:description" content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
+    <meta name="twitter:description"
+        content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
     <meta name="twitter:image" content="https://kuroza.co.uk/public/assets/KurozaBanner.png">
 
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'quicksand': ['Quicksand', 'sans-serif'],
-                    },
-                    colors: {
-                        'kuroza-red': '#e60000',
-                        'kuroza-dark-red': '#cc0000',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        body {
-            font-family: 'Quicksand', sans-serif;
-        }
-
-        .light-bg {
-            background: linear-gradient(135deg, #efe8e8 0%, #eee 50%, #f8f8f8 100%);
-        }
-
-        .text-gradient {
-            background: linear-gradient(45deg, #e60000, #ff4444);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .red-bg {
-            background: linear-gradient(135deg, #e60000 0%, #cc0000 100%);
-        }
-
-        /* Mobile menu styles */
-        .mobile-menu {
-            transform: translateX(100%);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .mobile-menu.open {
-            transform: translateX(0);
-        }
-    </style>
+    <script src="/public/scripts/tailwind-config.js"></script>
 </head>
 
-<body class="light-bg font-quicksand text-gray-800 min-h-screen">
+<body class="light-bg font-manrope text-gray-800 min-h-screen">
     <navbar-component />
     <!-- Hero Section -->
-    <section class="relative px-4 sm:px-6 py-12 sm:py-16 md:py-20 text-center">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 overflow-hidden">
+    <section class="relative px-16 sm:px-64 py-12 sm:py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- Background -->
+        <div class="absolute inset-0 overflow-hidden -z-10">
             <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
             </div>
             <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
             </div>
         </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto">
-            <h1
-                class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-4 sm:mb-6 leading-tight sm:leading-none text-gray-800">
-                Smart Social <br> <span class="text-gradient inline">Planning</span>
-            </h1>
-
-            <p class="text-lg sm:text-xl md:text-2xl text-gray-600 mb-6 sm:mb-8 font-light max-w-3xl mx-auto px-2">
-                The advanced event suggestion algorithm for seamless group meetups
-            </p>
-
-            <p
-                class="text-base sm:text-lg md:text-xl text-gray-600 mb-8 sm:mb-12 max-w-2xl mx-auto leading-relaxed px-2">
-                Kuroza automatically creates perfect event suggestions by analyzing your group's availability,
-                preferences, and locations. Never struggle with planning again.
-            </p>
-
-            <!-- CTA Button -->
-            <div class="mb-6 sm:mb-8">
-                <button onclick="learnMore()"
-                    class="px-8 sm:px-12 py-3 sm:py-5 bg-kuroza-red hover:bg-kuroza-dark-red text-white font-semibold rounded-2xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 text-lg sm:text-xl">
-                    Learn More
-                </button>
-            </div>
-
-            <p class="text-gray-500 text-sm mb-12 sm:mb-20">
-                🚀 Revolutionary social planning technology
-            </p>
+        <div>
+            <h2
+                class="text-5xl sm:text-6xl font-bold mb-4 text-kuroza-red text-center md:text-left flex items-center gap-2 md:gap-4 justify-center md:justify-start">
+                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Icon"
+                    class="inline-block rounded-lg md:rounded-2xl md:w-16 md:h-16 w-8 h-8">
+                Kuroza
+            </h2>
+            <p class="text-4xl md:text-5xl text-gray-700 mb-6 font-semibold text-center md:text-left">Social made
+                simple.</p>
+            <p class="text-2xl text-gray-600 text-center md:text-left">An intelligent app that handles every
+                step of planning, from checking
+                availability to confirming plans - so all you need to do is show up.</p>
+            <a href="#features"
+                class="w-full md:w-fit text-center bg-kuroza-red text-xl md:text-3xl text-white font-semibold rounded-2xl px-8 py-4 mt-8 block cursor-pointer hover:bg-kuroza-dark-red transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center md:justify-start gap-4">
+                Explore How
+                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2.59635 0.996155C4.30409 0.636857 6.07649 0.735643 7.73372 1.28249C9.39095 1.82934 10.8741 2.80479 12.0326 4.10989C14.0432 6.44848 15.294 10.4238 13.8548 13.3447C13.2411 14.5891 11.9683 15.6583 10.4966 15.2067C9.79306 14.941 9.22203 14.4096 8.90639 13.727C8.59076 13.0444 8.55581 12.2651 8.80899 11.557C9.95227 8.28211 14.4027 7.98138 17.0579 9.14066C20.8326 10.7877 22.5843 14.6574 23.7113 18.3724C24.0978 19.6653 22.0439 20.0392 21.6554 18.773C20.8143 16.0207 19.5773 12.9338 16.9407 11.4084C15.7755 10.7044 14.3986 10.4354 13.0541 10.6492C12.3577 10.7618 11.7102 11.0778 11.193 11.5575C10.8925 11.8575 10.2248 13.1068 11.1215 13.2193C11.585 13.2542 11.9333 12.438 12.0473 12.1149C12.2574 11.4102 12.3134 10.6686 12.2113 9.94033C12.0849 8.50393 11.5688 7.12929 10.7185 5.96471C9.82683 4.77838 8.61442 3.87202 7.2242 3.35264C5.83397 2.83327 4.324 2.72259 2.87289 3.03368C2.6106 3.06561 2.34602 2.99707 2.13221 2.84182C1.91839 2.68657 1.77128 2.45614 1.72045 2.19685C1.66961 1.93755 1.71882 1.66862 1.85818 1.44413C1.99754 1.21964 2.21674 1.05623 2.47168 0.986752L2.59635 0.996155Z"
+                        fill="#ffffff" />
+                    <path d="M16.8219 16.155L23.0033 20.2667L26.4339 14.3878" stroke="#ffffff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+        <div>
+            <img src="https://placehold.co/400x500" alt="preview of Kuroza app on phone" class="">
         </div>
     </section>
+
 
     <!-- Features Section -->
     <section id="features"
@@ -149,54 +101,131 @@
                 </p>
             </div>
 
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Feature 1 -->
+            <!-- Background  -->
+            <div class="absolute inset-0 overflow-hidden -z-10">
                 <div
-                    class="card-hover bg-white/80 backdrop-blur-lg p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-lg">
-                    <div
-                        class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                        <span class="text-xl sm:text-2xl">🧠</span>
+                    class="absolute top-[15%] left-[55%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute top-[37.5%] left-[25%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-[5%] left-[25%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+                </div>
+                <div
+                    class="absolute bottom-[27%] left-[55%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+                </div>
+            </div>
+
+            <!-- Feature Sections -->
+            <div class="flex flex-col gap-48 mt-48 md:mt-0 md:gap-24">
+                <!-- Feature 1 -->
+                <div>
+                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Tell Kuroza when you're free</div>
+                    <div class="flex gap-4 flex-col-reverse md:flex-row-reverse items-center justify-center">
+                        <div class="px-8 md:max-w-[30vw]">
+                            <div class="text-lg md:text-2xl font-semibold mb-4">
+                                One tap to share when you're free.
+                            </div>
+                            <div>
+                                <ul>
+                                    <li class="mb-4">Block out your schedule once, and let the app handle the rest.</li>
+                                    <li class="mb-4">No more endless "when are you free?" texts.</li>
+                                    <li class="text-center md:text-left">
+                                        <a href="/#download"
+                                            class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                            Download now
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Smart Algorithm</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        Our advanced AI analyzes everyone's schedules, preferences, and locations to suggest the perfect
-                        meetup times and places automatically.
-                    </p>
                 </div>
 
                 <!-- Feature 2 -->
-                <div
-                    class="card-hover bg-white/80 backdrop-blur-lg p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-lg">
-                    <div
-                        class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                        <span class="text-xl sm:text-2xl">📅</span>
+                <div>
+                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Smart plans, suggested for you
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Schedule Integration</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        Seamlessly sync with your existing calendars and automatically find windows when everyone is
-                        available for group activities.
-                    </p>
+                    <div class="flex gap-4 flex-col-reverse md:flex-row items-center justify-center">
+                        <div class="px-8 md:max-w-[30vw]">
+                            <div class="text-lg md:text-2xl font-semibold mb-4">
+                                Smart suggestions for your group
+                            </div>
+                            <div class="">
+                                The app finds the best time for everyone and suggest hangouts automatically, taking the
+                                hassle out of planning.
+                                <div class="text-center md:text-left">
+                                    <a href="/#download"
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        Download now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                    </div>
                 </div>
 
                 <!-- Feature 3 -->
-                <div
-                    class="card-hover bg-white/80 backdrop-blur-lg p-6 sm:p-8 rounded-3xl border border-gray-200 shadow-lg sm:col-span-2 lg:col-span-1">
-                    <div
-                        class="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-kuroza-red to-red-600 rounded-2xl flex items-center justify-center mb-4 sm:mb-6">
-                        <span class="text-xl sm:text-2xl">📍</span>
+                <div>
+                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Plan and chat, all in-app</div>
+                    <div class="flex gap-4 flex-col-reverse md:flex-row-reverse items-center justify-center">
+                        <div class="px-8 md:max-w-[30vw]">
+                            <div class="text-lg md:text-2xl font-semibold mb-4">
+                                Chat and plan together.
+                            </div>
+                            <div class="">
+                                <ul>
+                                    <li class="mb-4">Discuss details, share updates, and confirm plans—all in one place.
+                                    </li>
+                                    <li class="mb-4">No more juggling multiple group chats.</li>
+                                </ul>
+                                <div class="text-center md:text-left">
+                                    <a href="/#download"
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        Download now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
                     </div>
-                    <h3 class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-gray-800">Smart Locations</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
-                        Get personalized venue recommendations based on your group's location, preferences, and the type
-                        of activity you want to do.
-                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div>
+                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Prefer to plan it yourself?</div>
+                    <div class="flex gap-4 flex-col-reverse md:flex-row items-center justify-center">
+                        <div class="px-8 md:max-w-[30vw]">
+                            <div class="text-lg md:text-2xl font-semibold mb-4">
+                                Plan your own way.
+                            </div>
+                            <div class="">
+                                <ul>
+                                    <li class="mb-4">Want full control?
+                                    </li>
+                                    <li class="mb-4">Set your own event in seconds and invite your friends instantly.
+                                    </li>
+                                </ul>
+                                <div class="text-center md:text-left">
+                                    <a href="/#download"
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        Download now
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How it Works Section -->
-    <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20">
+    <!-- <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20">
         <div class="max-w-6xl mx-auto text-center">
             <h2
                 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center">
@@ -248,15 +277,15 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- CTA Section -->
-    <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 red-bg">
+    <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 red-bg" id="download">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white px-2">Ready to Transform Group
-                Planning?</h2>
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white px-2">The smarter way to plan
+                with your friends is here</h2>
             <p class="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
-                Join thousands of users who are already experiencing effortless social coordination with Kuroza.
+                Download the app now and turn free time into real plans.
             </p>
 
             <div class="flex flex-col sm:flex-row mb-6 sm:mb-8 items-center justify-center gap-4">
@@ -265,10 +294,6 @@
                 <img src="/public/assets/google_play_badge.png" alt="Download on Google Play"
                     class="h-12 sm:h-14 w-auto" />
             </div>
-
-            <p class="text-white/80 text-sm">
-                ⚡ Experience the future of social planning
-            </p>
         </div>
     </section>
 
