@@ -1,8 +1,14 @@
 # Configuration file for netlify 
-# Backend stuff
+# Build 
 [build]
 functions = "netlify/functions"
+command = "npm run minify"
+publish = "./"
 
+[build.environment]
+NODE_VERSION = "18"
+
+# Backend stuff
 [[redirects]]
 from = "/api/contact"
 to = "/.netlify/functions/contact-discord"

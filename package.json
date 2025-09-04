@@ -1,0 +1,15 @@
+{
+    "name": "kuroza-website",
+    "version": "1.0.0",
+    "scripts": {
+        "minify-html": "html-minifier-terser --input-dir=./ --output-dir=./ --file-ext html --collapse-whitespace --remove-comments --minify-js true --minify-css true",
+        "minify-css": "cleancss -o ./ ./ --recursive",
+        "minify-js": "find . -name '*.js' -type f -exec terser {} --compress --mangle --output {} \\;",
+        "minify": "npm run minify-html && npm run minify-css && npm run minify-js"
+    },
+    "devDependencies": {
+        "html-minifier-terser": "^7.2.0",
+        "clean-css-cli": "^6.0.0",
+        "terser": "^5.30.0"
+    }
+}
