@@ -56,7 +56,7 @@ export async function handler(event) {
         {
           name: "📡 Deploy URL",
           value: deploy_url ? `[View Site](${deploy_url})` : "_(none)_",
-          inline: false,
+          inline: true,
         },
       ],
       timestamp,
