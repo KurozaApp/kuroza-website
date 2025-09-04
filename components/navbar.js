@@ -8,24 +8,36 @@ class NavBar extends HTMLElement {
     }
     render() {
         this.innerHTML = /* html */`
-        <header class="relative z-50 px-4 sm:px-6 py-4 sm:py-6 flex">
+        <header class="relative z-50 px-4 md:px-6 py-4 md:py-6 flex">
             <nav class="max-w-7xl mx-auto flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
-                <a href="/" class="text-2xl sm:text-3xl font-bold text-gradient flex items-center gap-2 justify-start">
-                    <img src="/public/assets/Kuroza Icon.png" alt="Kuroza" class="w-6 h-6 sm:w-8 sm:h-8 rounded-lg">
+                <a href="/" class="text-2xl md:text-3xl font-bold text-gradient flex items-center gap-2 justify-start">
+                    <img src="/public/assets/Kuroza Icon.png" alt="Kuroza" class="w-8 h-8 md:w-12 md:h-12 rounded-lg">
                     Kuroza
                 </a>
             
                 <ul class="hidden md:flex text-2xl gap-4 flex items-center justify-center">
-                    <li><a href="#" target="_blank" class="border-2 border-gray-800 rounded-full p-1"><i class="fa-brands fa-instagram text-gray-800"></i></a></li>
-                    <li><a href="#" target="_blank" class="border-2 border-gray-800 rounded-full p-1"><i class="fa-brands fa-tiktok text-gray-800"></i></a></li>
-                    <li><a href="#" target="_blank" class="border-2 border-gray-800 rounded-full p-1"><i class="fa-brands fa-linkedin-in text-gray-800"></i></a></li>
+                    <li><a href="#" target="_blank">
+                        <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>    
+                    </a></li>
+                    <li><a href="#" target="_blank">
+                        <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </div>
+                    </a></li>
+                    <li><a href="#" target="_blank">
+                        <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                    </li>
                 </ul>
 
                 <ul class="hidden md:flex gap-4 flex items-center justify-end">
                     <li><a href="/about" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">About</a></li>
                     <li><a href="/contact" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Contact</a></li>
                     <li><a href="/join-us" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Join Us</a></li>
-                    <li><a href="/#download" class="text-white font-semibold bg-kuroza-red py-2 px-4 rounded-lg transition-all ease-in-out duration-300 hover:shadow-[0_0_20px_4px_rgba(220,38,38,0.6)]">Download</a></li>
+                    <li><a href="/#download" class="text-white font-semibold bg-kuroza-red py-2 px-4 rounded-lg transition-all ease-in-out duration-300 hover:shadow-[0_0_20px_4px_rgba(220,38,38,0.6)] text-lg">Download</a></li>
                 </ul>
             
                 <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg flex justify-end">
