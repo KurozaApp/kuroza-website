@@ -23,9 +23,9 @@ export async function handler(event) {
     // Pick colors and emojis depending on build state
     const status =
       state === "ready"
-        ? { emoji: "✅", color: 0x57f287, text: "Deploy Succeeded" }
+        ? { emoji: "✅", color: 0x57f287, text: "Website Deployment Succeeded" }
         : state === "error"
-        ? { emoji: "❌", color: 0xed4245, text: "Deploy Failed" }
+        ? { emoji: "❌", color: 0xed4245, text: "Website Deployment Failed" }
         : { emoji: "ℹ️", color: 0x5865f2, text: `State: ${state}` };
 
     // Format timestamp
