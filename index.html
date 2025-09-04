@@ -76,7 +76,7 @@
                 </svg>
             </a>
         </div>
-        <div style="width:400px !important; height:500px !important;">
+        <div class="w-full h-full flex items-center justify-center">
             <img src="https://placehold.co/400x500" alt="preview of Kuroza app on phone">
         </div>
     </section>
@@ -85,7 +85,7 @@
     <!-- Features Section -->
     <section id="features"
         class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-white/50 backdrop-blur-sm border-y border-gray-200">
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-7xl mx-auto md:px-8">
             <div class="text-center mb-12 sm:mb-16">
                 <h2
                     class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center">
@@ -122,25 +122,28 @@
                 <!-- Feature 1 -->
                 <div>
                     <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Tell Kuroza when you're free</div>
-                    <div class="flex gap-4 flex-col-reverse md:flex-row-reverse items-center justify-center">
-                        <div class="px-8 md:max-w-[30vw]">
+                    <!-- flex gap-4 flex-col-reverse md:flex-row-reverse items-center justify-evenly -->
+                    <div class="grid gap-4 md:grid-cols-2 items-center">
+                        <div class="px-8">
                             <div class="text-lg md:text-2xl font-semibold mb-4">
                                 One tap to share when you're free.
                             </div>
                             <div>
                                 <ul>
-                                    <li class="mb-4">Block out your schedule once, and let the app handle the rest.</li>
-                                    <li class="mb-4">No more endless "when are you free?" texts.</li>
+                                    <li class="">Block out your schedule once, and let the app handle the rest.</li>
+                                    <li class="">No more endless "when are you free?" texts.</li>
                                     <li class="text-center md:text-left">
                                         <a href="/#download"
-                                            class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                            class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
                                             Download now
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                        <div class="order-first flex items-center justify-center">
+                            <img src="https://placehold.co/500x400">
+                        </div>
                     </div>
                 </div>
 
@@ -148,8 +151,8 @@
                 <div>
                     <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Smart plans, suggested for you
                     </div>
-                    <div class="flex gap-4 flex-col-reverse md:flex-row items-center justify-center">
-                        <div class="px-8 md:max-w-[30vw]">
+                    <div class="grid gap-4 md:grid-cols-2 items-center">
+                        <div class="px-8">
                             <div class="text-lg md:text-2xl font-semibold mb-4">
                                 Smart suggestions for your group
                             </div>
@@ -158,126 +161,73 @@
                                 hassle out of planning.
                                 <div class="text-center md:text-left">
                                     <a href="/#download"
-                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
                                         Download now
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                        <div class="flex items-center justify-center"><img src="https://placehold.co/500x400"></div>
                     </div>
                 </div>
 
                 <!-- Feature 3 -->
                 <div>
                     <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Plan and chat, all in-app</div>
-                    <div class="flex gap-4 flex-col-reverse md:flex-row-reverse items-center justify-center">
-                        <div class="px-8 md:max-w-[30vw]">
+                    <div class="grid gap-4 md:grid-cols-2 items-center">
+                        <div class="px-8">
                             <div class="text-lg md:text-2xl font-semibold mb-4">
                                 Chat and plan together.
                             </div>
                             <div class="">
                                 <ul>
-                                    <li class="mb-4">Discuss details, share updates, and confirm plans—all in one place.
+                                    <li class="">Discuss details, share updates, and confirm plans—all in one place.
                                     </li>
-                                    <li class="mb-4">No more juggling multiple group chats.</li>
+                                    <li class="">No more juggling multiple group chats.</li>
                                 </ul>
                                 <div class="text-center md:text-left">
                                     <a href="/#download"
-                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
                                         Download now
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                        <div class="order-first flex items-center justify-center">
+                            <img src="https://placehold.co/500x400">
+                        </div>
                     </div>
                 </div>
 
                 <!-- Feature 4 -->
                 <div>
                     <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Prefer to plan it yourself?</div>
-                    <div class="flex gap-4 flex-col-reverse md:flex-row items-center justify-center">
-                        <div class="px-8 md:max-w-[30vw]">
+                    <div class="grid gap-4 md:grid-cols-2 items-center">
+                        <div class="px-8">
                             <div class="text-lg md:text-2xl font-semibold mb-4">
                                 Plan your own way.
                             </div>
                             <div class="">
                                 <ul>
-                                    <li class="mb-4">Want full control?
+                                    <li class="">Want full control?
                                     </li>
-                                    <li class="mb-4">Set your own event in seconds and invite your friends instantly.
+                                    <li class="">Set your own event in seconds and invite your friends instantly.
                                     </li>
                                 </ul>
                                 <div class="text-center md:text-left">
                                     <a href="/#download"
-                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200">
+                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
                                         Download now
                                     </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="w-48 md:w-fit md:max-w-[30vw]"><img src="https://placehold.co/500x400"></div>
+                        <div class="flex items-center justify-center"><img src="https://placehold.co/500x400"></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- How it Works Section -->
-    <!-- <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20">
-        <div class="max-w-6xl mx-auto text-center">
-            <h2
-                class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center">
-                <span>How</span>
-                <div class="flex items-center gap-2">
-                    <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo"
-                        class="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-lg">
-                    <span>Kuroza Works</span>
-                </div>
-            </h2>
-            <p class="text-lg sm:text-xl text-gray-600 mb-12 sm:mb-16 max-w-2xl mx-auto px-2">
-                Three simple steps to perfect group planning
-            </p>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
-                <div class="space-y-4 sm:space-y-6">
-                    <div
-                        class="w-16 h-16 sm:w-20 sm:h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-xl sm:text-2xl font-bold text-kuroza-red">
-                        1
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Share Availability</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base px-2">
-                        Simply input when you are free. Kuroza syncs with you & your friend's calendars for effortless
-                        scheduling.
-                    </p>
-                </div>
-
-                <div class="space-y-4 sm:space-y-6">
-                    <div
-                        class="w-16 h-16 sm:w-20 sm:h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-xl sm:text-2xl font-bold text-kuroza-red">
-                        2
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800">AI Suggestions</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base px-2">
-                        Our algorithm analyzes preferences and creates perfect event suggestions with optimal timing and
-                        locations.
-                    </p>
-                </div>
-
-                <div class="space-y-4 sm:space-y-6 sm:col-span-2 lg:col-span-1">
-                    <div
-                        class="w-16 h-16 sm:w-20 sm:h-20 bg-kuroza-red/20 border-2 border-kuroza-red rounded-full flex items-center justify-center mx-auto text-xl sm:text-2xl font-bold text-kuroza-red">
-                        3
-                    </div>
-                    <h3 class="text-xl sm:text-2xl font-bold text-gray-800">Plan & Meet</h3>
-                    <p class="text-gray-600 leading-relaxed text-sm sm:text-base px-2">
-                        Review suggestions, vote on favorites, and confirm your perfect group meetup. It's that simple!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- CTA Section -->
     <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 red-bg" id="download">
