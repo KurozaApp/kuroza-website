@@ -13,6 +13,10 @@ from = "/api/join"
 to = "/.netlify/functions/joinus-discord"
 status = 200
 
+[[redirects]]
+from = "/api/deploy"
+to = "/.netlify/functions/deploy-discord"
+status = 200
 
 # Frontend stuff
 [[redirects]]
