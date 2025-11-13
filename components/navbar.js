@@ -16,12 +16,12 @@ class NavBar extends HTMLElement {
                 </a>
             
                 <ul class="hidden md:flex text-2xl gap-4 flex items-center justify-center">
-                    <li><a href="#" target="_blank">
+                    <li><a href="https://instagram.com/kurozauk" target="_blank">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-instagram"></i>
                         </div>    
                     </a></li>
-                    <li><a href="#" target="_blank">
+                    <li><a href="https://www.tiktok.com/@kuroza_uk" target="_blank">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-tiktok"></i>
                         </div>
