@@ -26,7 +26,7 @@ class NavBar extends HTMLElement {
                             <i class="fa-brands fa-tiktok"></i>
                         </div>
                     </a></li>
-                    <li><a href="#" target="_blank">
+                    <li><a href="https://www.linkedin.com/company/kuroza" target="_blank">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-linkedin-in"></i></a>
                         </div>
