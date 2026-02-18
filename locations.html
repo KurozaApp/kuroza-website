@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding Locations Near You - Kuroza</title>
+
+    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+
+    <!-- Components -->
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="/public/scripts/tailwind-config.js"></script>
+    <script src="/public/scripts/scroll-animations.js"></script>
+</head>
+
+<body class="light-bg font-manrope text-gray-800 min-h-screen">
+    <navbar-component />
+
+    <!-- Hero Section -->
+    <section class="section relative py-12 md:py-20 lg:py-24">
+        <div class="container max-w-5xl mx-auto text-center fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-kuroza-red mb-6">
+                Finding Locations Near You
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">
+                Discover perfect venues based on proximity and group preferences
+            </p>
+            <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                Kuroza intelligently suggests meeting locations that work for everyone in your group, 
+                considering distance, accessibility, and group interests.
+            </p>
+        </div>
+    </section>
+
+    <!-- Feature Overview Section -->
+    <section class="section fade-in">
+        <div class="container max-w-5xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Smart Location Discovery</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        Rather than spending hours debating where to meet, let Kuroza handle it. Our intelligent algorithm 
+                        analyzes:
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-kuroza-red mt-1 text-lg"></i>
+                            <span class="text-gray-700"><strong>Geographic proximity</strong> - finds locations central to your group</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-kuroza-red mt-1 text-lg"></i>
+                            <span class="text-gray-700"><strong>Real-time suggestions</strong> - updated based on everyone's location</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-kuroza-red mt-1 text-lg"></i>
+                            <span class="text-gray-700"><strong>Venue details</strong> - ratings, hours, and capacity information</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-check text-kuroza-red mt-1 text-lg"></i>
+                            <span class="text-gray-700"><strong>Group preferences</strong> - filters by cuisine, activity type, and atmosphere</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://placehold.co/400x500" alt="Location Discovery Interface" 
+                        class="rounded-xl shadow-lg max-w-sm">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="section bg-white/50 backdrop-blur-sm fade-in">
+        <div class="container max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">How Location Discovery Works</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-8 text-center">
+                    <div class="bg-kuroza-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-location-dot text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">1. Share Location</h3>
+                    <p class="text-gray-600">
+                        Group members securely share their location preferences and current whereabouts.
+                    </p>
+                </div>
+
+                <div class="card p-8 text-center">
+                    <div class="bg-kuroza-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-brain text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">2. Smart Analysis</h3>
+                    <p class="text-gray-600">
+                        Our algorithm calculates optimal meeting points and filters venues by preferences.
+                    </p>
+                </div>
+
+                <div class="card p-8 text-center">
+                    <div class="bg-kuroza-red/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-map-pin text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-3">3. Get Suggestions</h3>
+                    <p class="text-gray-600">
+                        Receive personalized venue recommendations perfect for your group.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section fade-in">
+        <div class="container max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Why Location Discovery Matters</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-clock text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Save Time</h3>
+                        <p class="text-gray-600">
+                            No more endless group chats debating where to meet. Get suggestions instantly.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-handshake text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Fair to Everyone</h3>
+                        <p class="text-gray-600">
+                            Locations are calculated to be fair to all group members, not just convenient for one person.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-star text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Quality Venues</h3>
+                        <p class="text-gray-600">
+                            Suggestions are based on ratings, reviews, and real data to ensure great experiences.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-chart-line text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Learn Preferences</h3>
+                        <p class="text-gray-600">
+                            The more you use it, the better Kuroza understands your group's preferences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section py-16 md:py-24 red-bg fade-in">
+        <div class="container max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Never Wonder Where to Meet Again
+            </h2>
+            <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Download Kuroza and let our intelligent location discovery make meetups effortless.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store" class="h-20 w-auto">
+                <img src="/public/assets/google_play_badge.png" alt="Download on Google Play" class="h-20 w-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Back to Home -->
+    <section class="section py-8 text-center">
+        <a href="/" class="inline-flex items-center gap-2 text-kuroza-red font-semibold hover:text-kuroza-dark-red text-lg">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </section>
+
+    <footer-component />
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

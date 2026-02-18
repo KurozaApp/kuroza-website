@@ -28,9 +28,9 @@ class NavBar extends HTMLElement {
                     </a></li>
                     <li><a href="https://www.linkedin.com/company/kuroza" target="_blank">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
-                            <i class="fa-brands fa-linkedin-in"></i></a>
+                            <i class="fa-brands fa-linkedin-in"></i>
                         </div>
-                    </li>
+                    </a></li>
                 </ul>
 
                 <ul class="hidden md:flex gap-4 flex items-center justify-end">

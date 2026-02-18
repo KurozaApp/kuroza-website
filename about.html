@@ -12,6 +12,7 @@
     <!-- Components -->
     <script src="/components/navbar.js"></script>
     <script src="/components/footer.js"></script>
+    <script src="/components/team.js"></script>
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,12 +23,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script src="/public/scripts/tailwind-config.js"></script>
+    <script src="/public/scripts/scroll-animations.js"></script>
 </head>
 
 <body class="light-bg font-manrope text-gray-800 min-h-screen">
     <navbar-component />
 
-    <section class="relative px-4 py-12">
+    <!-- Hero Section -->
+    <section class="section relative py-16 md:py-24 lg:py-28">
         <!-- Background -->
         <div class="absolute inset-0 overflow-hidden -z-10">
             <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
@@ -36,87 +39,206 @@
             </div>
         </div>
 
-        <div class="sm:mx-[5vw] text-lg text-gray-700 mb-8 leading-relaxed flex flex-col gap-4">
-            <h1 class="text-4xl sm:text-5xl font-bold mb-6 text-gray-900 flex items-center gap-4">
-                About
-                <span class="text-kuroza-red flex items-center gap-2 justify-start">
-                    <img src="/public/assets/Kuroza Icon.png" alt="Kuroza" class="w-8 h-8 md:w-12 md:h-12 rounded-lg">
-                    Kuroza
+        <div class="container max-w-4xl mx-auto text-center fade-in">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                <span class="flex items-center justify-center gap-3 mb-4">
+                    <img src="/public/assets/Kuroza Icon.png" alt="Kuroza" class="w-12 h-12 md:w-16 md:h-16 rounded-lg">
+                    <span class="text-kuroza-red">Kuroza</span>
                 </span>
+                Bringing Friends Together
             </h1>
-
-            <!-- Separator -->
-            <div class="my-8 border-kuroza-red border-t-2 rounded-full"> </div>
-
-            <p class="leading-relaxed">
-                Kuroza was born out of a simple but universal frustration: <span class="font-semibold">staying connected
-                with friends shouldn't be this difficult</span>.
-            </p>
-            <p class="leading-relaxed">
-                Between <b>busy</b> schedules, <b>clashing</b> commitments, and <b>endless</b> group chats that never 
-                lead anywhere, planning a get-together often feels harder than the hangout itself. We created 
-                <span class="font-semibold text-kuroza-red">Kuroza</span> to change that.
-            </p>
-            <p class="leading-relaxed">
-                At its core, <span class="font-semibold text-kuroza-red">Kuroza</span> is a social organiser that <b>removes
-                the stress from planning events</b> and brings back the joy of spending time with <b>the people who matter</b>.
-            </p>
-
-            <!-- Separator -->
-            <div class="my-8 border-kuroza-red border-t-2 rounded-full"> </div>
-
-            <p class="leading-relaxed">
-                By using <b>smart suggestions</b> based on your group's availability and
-                preferences, <span class="font-semibold text-kuroza-red">Kuroza</span> helps you skip the back-and-forth 
-                messages and jump straight to <b>making memories</b>.
-            </p>
-            <p class="leading-relaxed">
-                Whether it's a quick coffee, a study session, or a full weekend trip, the app makes it <b>effortless</b> to turn ideas
-                into reality.
-            </p>
-
-            <!-- Separator -->
-            <div class="my-8 border-kuroza-red border-t-2 rounded-full"> </div>
-
-            <p class="leading-relaxed">
-                Unlike traditional event apps, <span class="font-semibold text-kuroza-red">Kuroza</span> is designed for everyday use. 
-                It's not just for birthdays or big nights out—it's for the <b>smaller, more meaningful moments</b> that strengthen 
-                <b>friendships</b> over time. Our focus is on simplicity, reliability, and making social life feel natural again in 
-                a world where it's easy to drift apart.
-            </p>
-
-            <!-- Separator -->
-            <div class="my-8 border-kuroza-red border-t-2 rounded-full"> </div>
-
-            <p class="leading-relaxed">
-                Built by <b>students</b>, for <b>students</b>, <span class="font-semibold text-kuroza-red">Kuroza</span> was created 
-                with the university experience in mind, where friendships are everything and schedules change constantly. But our 
-                vision reaches far beyond campus. We imagine <span class="font-semibold text-kuroza-red">Kuroza</span> becoming the 
-                go-to tool for anyone who wants to stay socially connected <b>without the hassle</b>, no matter where they are in
-                the world.
-            </p>
-
-            <!-- Separator -->
-            <div class="my-8 border-kuroza-red border-t-2 rounded-full"></div>
-
-            <p class="leading-relaxed">
-                <span class="font-semibold text-kuroza-red">Kuroza</span> is more than an app—it's a philosophy: <b>time together should 
-                never be lost to endless planning</b>. By blending technology with the human need for connection, we're making 
-                <b>social life simple again</b>.
-            </p>
-            <p class="leading-relaxed">
-                Join us on this journey to make hanging out with friends as easy as it should be. Because at the end of the day, 
-                <b>it's the moments we share that truly matter</b>.
+            <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                We believe staying connected with the people who matter shouldn't require endless planning. 
+                So we built a better way.
             </p>
         </div>
     </section>
 
-    <!-- Meet the Team -->
-    <!-- <section>
-        Meet the team
-    </section> -->
+    <!-- Mission Section -->
+    <section class="section bg-white/50 backdrop-blur-sm fade-in">
+        <div class="container max-w-4xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        We're on a mission to <strong>eliminate the friction of group planning</strong>. Planning hangouts shouldn't take 
+                        longer than the hangout itself.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-4">
+                        By combining intelligent scheduling with smart suggestions, we help groups skip the endless back-and-forth messages 
+                        and focus on what really matters: <strong>making memories together</strong>.
+                    </p>
+                    <p class="text-lg text-gray-600">
+                        Whether it's a quick coffee, a study session, or a weekend adventure, Kuroza makes it effortless to turn ideas 
+                        into reality.
+                    </p>
+                </div>
+                <div class="flex justify-center">
+                    <div class="bg-gradient-to-br from-kuroza-red/10 to-kuroza-red/5 rounded-2xl p-12 flex items-center justify-center">
+                        <i class="fa-solid fa-target text-kuroza-red text-8xl opacity-80"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section fade-in">
+        <div class="container max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">The Problem We Solve</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-8">
+                    <div class="bg-kuroza-red/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-hourglass-end text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Endless Planning</h3>
+                    <p class="text-gray-600">
+                        Hours spent in group chats debating when and where to meet, with no clear answer.
+                    </p>
+                </div>
+
+                <div class="card p-8">
+                    <div class="bg-kuroza-red/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-calendar-xmark text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Schedule Conflicts</h3>
+                    <p class="text-gray-600">
+                        Finding a time that works for everyone is nearly impossible with busy schedules.
+                    </p>
+                </div>
+
+                <div class="card p-8">
+                    <div class="bg-kuroza-red/10 w-14 h-14 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-comments text-kuroza-red text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Message Overload</h3>
+                    <p class="text-gray-600">
+                        Scattered across multiple chats and platforms, losing important details in the noise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="section bg-white/50 backdrop-blur-sm fade-in">
+        <div class="container max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Our Values</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-people-group text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Connection First</h3>
+                        <p class="text-gray-600">
+                            Everything we build is designed to strengthen friendships and bring people together.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-lightbulb text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Simplicity</h3>
+                        <p class="text-gray-600">
+                            Great products do one thing really well. We focus on making planning effortless.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-rocket text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Innovation</h3>
+                        <p class="text-gray-600">
+                            We use AI and machine learning to make smarter suggestions that actually work.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <div class="flex-shrink-0">
+                        <div class="bg-kuroza-red/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-handshake text-kuroza-red text-xl"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-lg text-gray-800 mb-2">Reliability</h3>
+                        <p class="text-gray-600">
+                            We're built for everyday use. You can count on Kuroza when it matters.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="section fade-in">
+        <div class="container max-w-4xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-12 text-center">Our Story</h2>
+            <div class="card p-8 md:p-12">
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Kuroza was born out of frustration. Our founders were constantly battling the same problem that millions face: 
+                    <strong>how do you actually get a group of friends together when everyone has different schedules?</strong>
+                </p>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                    Built by students, for students, Kuroza was created with the university experience in mind—where friendships are 
+                    everything but calendars are chaotic. But we quickly realized this problem wasn't limited to campus. Whether you're 
+                    juggling work, family, or a side hustle, staying socially connected shouldn't require a project manager.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Today, Kuroza is helping groups of all kinds spend less time planning and more time doing what matters: making 
+                    memories together.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <team-component />
+
+    <!-- CTA Section -->
+    <section class="section py-16 md:py-24 red-bg fade-in">
+        <div class="container max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Make Planning Easy?
+            </h2>
+            <p class="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Join thousands of groups using Kuroza to spend less time planning and more time together.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store" class="h-20 w-auto">
+                <img src="/public/assets/google_play_badge.png" alt="Download on Google Play" class="h-20 w-auto">
+            </div>
+        </div>
+    </section>
 
     <footer-component />
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

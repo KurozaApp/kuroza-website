@@ -6,6 +6,9 @@ class Footer extends HTMLElement {
         this.render();
     }
     render() {
+        const currentYear = new Date().getFullYear();
+        const copyrightYear = currentYear > 2025 ? `2025-${currentYear}` : '2025';
+        
         this.innerHTML = /* html */`
             <footer class="px-4 sm:px-6 py-8 sm:py-12 border-t border-gray-200 bg-white">
                 <div class="max-w-7xl mx-auto text-center">
@@ -47,7 +50,7 @@ class Footer extends HTMLElement {
                         </li>
                     </ul>
                 </div>
-                <p class="text-gray-400 text-xs sm:text-sm mt-6 sm:mt-8">© 2025 Kuroza. All rights reserved.</p>
+                <p class="text-gray-400 text-xs sm:text-sm mt-6 sm:mt-8">© ${copyrightYear} Kuroza. All rights reserved.</p>
             </div>
         </footer>
         `;
