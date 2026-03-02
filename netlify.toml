@@ -2,7 +2,6 @@
 # Build 
 [build]
 functions = "netlify/functions"
-command = "npm run minify"
 publish = "./"
 
 [build.environment]
