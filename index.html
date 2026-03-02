@@ -46,47 +46,53 @@
 <body class="light-bg font-manrope text-gray-800 min-h-screen">
     <navbar-component />
     <!-- Hero Section -->
-    <section class="relative px-16 md:px-[20vw] py-12 md:py-16 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <!-- Background -->
-        <div class="absolute inset-0 overflow-hidden -z-10">
-            <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
-            </div>
-            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
+    <section class="relative py-12 md:py-16 lg:py-20">
+        <!-- Full-width image row on larger screens -->
+        <div class="lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full -z-0">
+            <div class="hidden lg:block relative w-full h-full overflow-hidden">
+                <img src="./public/images/hero.jpg" class="w-full h-[600px] object-cover" alt="Hero">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#eeeaea] via-[#eeeaea]/70 to-transparent"></div>
             </div>
         </div>
-        <div>
-            <h2
-                class="text-5xl sm:text-6xl font-bold mb-4 text-kuroza-red text-center md:text-left flex items-center gap-2 md:gap-4 justify-center md:justify-start">
-                <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Icon"
-                    class="inline-block rounded-lg md:rounded-2xl md:w-16 md:h-16 w-8 h-8">
-                Kuroza
-            </h2>
-            <p class="text-4xl md:text-5xl text-gray-700 mb-6 font-semibold text-center md:text-left">Social made
-                simple.</p>
-            <p class="text-2xl text-gray-600 text-center md:text-left">An intelligent app that handles every
-                step of planning, from checking
-                availability to confirming plans - so all you need to do is show up.</p>
-            <a href="#features"
-                class="w-full md:w-fit text-center bg-kuroza-red text-xl md:text-3xl text-white font-semibold rounded-2xl px-8 py-4 mt-8 block cursor-pointer hover:bg-kuroza-dark-red transition-all duration-300 hover:shadow-lg hover:-translate-y-1 flex items-center justify-center md:justify-start gap-4">
-                Explore How
-                <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M2.59635 0.996155C4.30409 0.636857 6.07649 0.735643 7.73372 1.28249C9.39095 1.82934 10.8741 2.80479 12.0326 4.10989C14.0432 6.44848 15.294 10.4238 13.8548 13.3447C13.2411 14.5891 11.9683 15.6583 10.4966 15.2067C9.79306 14.941 9.22203 14.4096 8.90639 13.727C8.59076 13.0444 8.55581 12.2651 8.80899 11.557C9.95227 8.28211 14.4027 7.98138 17.0579 9.14066C20.8326 10.7877 22.5843 14.6574 23.7113 18.3724C24.0978 19.6653 22.0439 20.0392 21.6554 18.773C20.8143 16.0207 19.5773 12.9338 16.9407 11.4084C15.7755 10.7044 14.3986 10.4354 13.0541 10.6492C12.3577 10.7618 11.7102 11.0778 11.193 11.5575C10.8925 11.8575 10.2248 13.1068 11.1215 13.2193C11.585 13.2542 11.9333 12.438 12.0473 12.1149C12.2574 11.4102 12.3134 10.6686 12.2113 9.94033C12.0849 8.50393 11.5688 7.12929 10.7185 5.96471C9.82683 4.77838 8.61442 3.87202 7.2242 3.35264C5.83397 2.83327 4.324 2.72259 2.87289 3.03368C2.6106 3.06561 2.34602 2.99707 2.13221 2.84182C1.91839 2.68657 1.77128 2.45614 1.72045 2.19685C1.66961 1.93755 1.71882 1.66862 1.85818 1.44413C1.99754 1.21964 2.21674 1.05623 2.47168 0.986752L2.59635 0.996155Z"
-                        fill="#ffffff" />
-                    <path d="M16.8219 16.155L23.0033 20.2667L26.4339 14.3878" stroke="#ffffff" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-            </a>
-        </div>
-        <div class="w-full h-full flex items-center justify-center">
-            <div class="w-full h-full flex items-center justify-center">
-                <div class="relative group w-full h-full">
-                    <!-- Image -->
-                    <img src="./public/images/hero.jpg" class="w-full h-full object-cover 
-                        rounded-3xl shadow-2xl shadow-black/30
-                        transition-all duration-700 saturate-125
-                        group-hover:scale-105">
 
+        <!-- Content with proper padding -->
+        <div class="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
+            <div class="max-w-7xl mx-auto">
+                <!-- Background decorative elements -->
+                <div class="absolute inset-0 overflow-hidden -z-10">
+                    <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+                    </div>
+                    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                    <!-- Left content -->
+                    <div>
+                        <h2 class="text-5xl sm:text-6xl font-bold mb-4 text-kuroza-red flex items-center gap-2 md:gap-4 justify-start">
+                            <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Icon"
+                                class="inline-block rounded-lg md:rounded-2xl md:w-16 md:h-16 w-8 h-8">
+                            Kuroza
+                        </h2>
+                        <p class="text-4xl md:text-5xl text-gray-700 mb-6 font-semibold">Social made simple.</p>
+                        <p class="text-2xl text-gray-600 mb-8">An intelligent app that handles every step of planning, from checking availability to confirming plans - so all you need to do is show up.</p>
+                        <a href="#features"
+                            class="cta-button inline-flex bg-gradient-to-r from-kuroza-red to-red-500 text-white text-lg md:text-xl font-semibold rounded-xl px-6 py-3 cursor-pointer hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 items-center gap-3">
+                            Explore How
+                            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.59635 0.996155C4.30409 0.636857 6.07649 0.735643 7.73372 1.28249C9.39095 1.82934 10.8741 2.80479 12.0326 4.10989C14.0432 6.44848 15.294 10.4238 13.8548 13.3447C13.2411 14.5891 11.9683 15.6583 10.4966 15.2067C9.79306 14.941 9.22203 14.4096 8.90639 13.727C8.59076 13.0444 8.55581 12.2651 8.80899 11.557C9.95227 8.28211 14.4027 7.98138 17.0579 9.14066C20.8326 10.7877 22.5843 14.6574 23.7113 18.3724C24.0978 19.6653 22.0439 20.0392 21.6554 18.773C20.8143 16.0207 19.5773 12.9338 16.9407 11.4084C15.7755 10.7044 14.3986 10.4354 13.0541 10.6492C12.3577 10.7618 11.7102 11.0778 11.193 11.5575C10.8925 11.8575 10.2248 13.1068 11.1215 13.2193C11.585 13.2542 11.9333 12.438 12.0473 12.1149C12.2574 11.4102 12.3134 10.6686 12.2113 9.94033C12.0849 8.50393 11.5688 7.12929 10.7185 5.96471C9.82683 4.77838 8.61442 3.87202 7.2242 3.35264C5.83397 2.83327 4.324 2.72259 2.87289 3.03368C2.6106 3.06561 2.34602 2.99707 2.13221 2.84182C1.91839 2.68657 1.77128 2.45614 1.72045 2.19685C1.66961 1.93755 1.71882 1.66862 1.85818 1.44413C1.99754 1.21964 2.21674 1.05623 2.47168 0.986752L2.59635 0.996155Z" fill="#ffffff" />
+                                <path d="M16.8219 16.155L23.0033 20.2667L26.4339 14.3878" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Mobile hero image (visible only on small/medium screens) -->
+                    <div class="lg:hidden w-full flex items-center justify-center">
+                        <div class="relative w-full">
+                            <img src="./public/images/hero.jpg" class="w-full rounded-3xl shadow-2xl shadow-black/30 saturate-125">
+                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,8 +101,8 @@
 
     <!-- Features Section -->
     <section id="features"
-        class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 bg-white/50 backdrop-blur-sm border-y border-gray-200">
-        <div class="max-w-7xl mx-auto md:px-8">
+        class="px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 bg-white/50 backdrop-blur-sm border-y border-gray-200">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-12 sm:mb-16">
                 <h2
                     class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center">
@@ -253,7 +259,7 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="px-4 sm:px-6 py-12 sm:py-16 md:py-20 red-bg fade-in" id="download">
+    <section class="px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 red-bg fade-in" id="download">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white px-2">The smarter way to plan
                 with your friends is here</h2>
@@ -263,9 +269,9 @@
 
             <div class="flex flex-col sm:flex-row mb-6 sm:mb-8 items-center justify-center gap-4">
                 <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store"
-                    class="h-[16vw] sm:h-20 w-auto" />
+                    class="h-[16vw] sm:h-20 w-auto transition-transform duration-300 hover:scale-105" />
                 <img src="/public/assets/google_play_badge.png" alt="Download on Google Play"
-                    class="h-[16vw] sm:h-20 w-auto" />
+                    class="h-[16vw] sm:h-20 w-auto transition-transform duration-300 hover:scale-105" />
             </div>
         </div>
     </section>
