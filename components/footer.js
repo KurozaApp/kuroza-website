@@ -25,25 +25,25 @@ class Footer extends HTMLElement {
                     </div>
                     <ul class="flex gap-4 md:flex-col items-center md:items-start justify-center">
                         <li>
-                            <a href="https://instagram.com/kurozauk" target="_blank">
+                            <a href="https://instagram.com/kurozauk" target="_blank" rel="noopener noreferrer">
                                 <div class="md:border-2 border-gray-600 text-gray-600 rounded-full md:p-1 md:pr-2 hover:text-white hover:bg-kuroza-red hover:border-kuroza-red transition-colors">
-                                    <i class="fa-brands fa-instagram"></i> 
+                                    <i class="fa-brands fa-instagram"></i>
                                     <span class="hidden md:inline-block">Instagram</span>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="https://tiktok.com/@kuroza_uk" target="_blank">
+                            <a href="https://tiktok.com/@kuroza_uk" target="_blank" rel="noopener noreferrer">
                                 <div class="md:border-2 border-gray-600 text-gray-600 rounded-full md:p-1 md:pr-2 hover:text-white hover:bg-kuroza-red hover:border-kuroza-red transition-colors">
-                                    <i class="fa-brands fa-tiktok"></i> 
+                                    <i class="fa-brands fa-tiktok"></i>
                                     <span class="hidden md:inline-block">TikTok</span>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/company/kuroza" target="_blank">
+                            <a href="https://linkedin.com/company/kuroza" target="_blank" rel="noopener noreferrer">
                                 <div class="md:border-2 border-gray-600 text-gray-600 rounded-full md:p-1 md:pr-2 hover:text-white hover:bg-kuroza-red hover:border-kuroza-red transition-colors">
-                                    <i class="fa-brands fa-linkedin-in"></i> 
+                                    <i class="fa-brands fa-linkedin-in"></i>
                                     <span class="hidden md:inline-block">LinkedIn</span>
                                 </div>
                             </a>

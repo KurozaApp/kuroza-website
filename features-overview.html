@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Features - Kuroza</title>
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/public/scripts/tailwind-config.js"></script>
+</head>
+
+<body class="light-bg text-gray-800 min-h-screen">
+    <navbar-component></navbar-component>
+
+    <main>
+        <section id="top" class="section pb-6">
+            <div class="container max-w-6xl">
+                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90 mb-4">Kuroza Platform</p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 max-w-5xl leading-[1.02]">All Features, One Flow</h1>
+                <p class="text-lg md:text-2xl text-gray-600 mt-6 max-w-4xl">Kuroza is designed to move your group from “should we do something?” to a confirmed plan with less friction, clearer decisions, and higher follow-through.</p>
+            </div>
+        </section>
+
+        <section class="pb-10">
+            <div class="container max-w-6xl">
+                <div class="overflow-x-auto border-y border-gray-200 py-4">
+                    <nav class="flex gap-6 text-sm font-semibold text-gray-600 whitespace-nowrap">
+                        <a href="#problem" class="hover:text-kuroza-red">Problem</a>
+                        <a href="#workflow" class="hover:text-kuroza-red">Workflow</a>
+                        <a href="#step-1" class="hover:text-kuroza-red">Step 1</a>
+                        <a href="#step-2" class="hover:text-kuroza-red">Step 2</a>
+                        <a href="#step-3" class="hover:text-kuroza-red">Step 3</a>
+                        <a href="#step-4" class="hover:text-kuroza-red">Step 4</a>
+                        <a href="#impact" class="hover:text-kuroza-red">Impact</a>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem" class="pb-16">
+            <div class="container max-w-6xl grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+                <div class="lg:col-span-4">
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90">Planning Reality</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Why most group plans stall</h2>
+                </div>
+                <div class="lg:col-span-8 text-lg text-gray-700 space-y-5">
+                    <p>Most groups don’t fail because they lack ideas. They fail because timing is unclear, communication is fragmented, and decision quality drops as message volume rises.</p>
+                    <p>Kuroza is built as a sequence that resolves those points in order. Each step reduces uncertainty, so by the time a decision is needed, the group is choosing between realistic options instead of debating from scratch.</p>
+                    <p>This is a systems problem, not a motivation problem. Kuroza focuses on the system: first align time, then coordinate context, then narrow location choices, then suggest events with high acceptance probability.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="workflow" class="pb-16">
+            <div class="container max-w-6xl border-y border-gray-200 py-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900">The workflow</h2>
+                <p class="text-lg text-gray-600 mt-4 max-w-3xl">One clean progression from availability to a plan people actually attend.</p>
+                <p class="text-base md:text-lg text-gray-700 mt-6">Availability baseline -> coordinated context -> fair location options -> automatic event suggestions -> confirmation.</p>
+                <p class="text-base md:text-lg text-gray-700 mt-3">The key principle is dependency order: each stage provides signal quality for the next stage, so suggestions improve as context improves.</p>
+            </div>
+        </section>
+
+        <section id="step-1" class="pb-16">
+            <div class="container max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90">Step 1</p>
+                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Availability Sharing</h3>
+                    <p class="text-lg text-gray-700 mt-5">Each member shares availability once. Kuroza continuously surfaces overlap windows so planning starts from what is actually possible.</p>
+                    <p class="text-gray-600 mt-4">Insight: this removes the highest-friction phase in group chats, where timing ambiguity prevents progress.</p>
+                    <p class="text-gray-700 mt-5"><strong>Signals used:</strong> free/busy windows, hard constraints, recurring behavior, and participation thresholds.</p>
+                    <p class="text-gray-700 mt-3"><strong>Why this is effective:</strong> most groups waste time discussing slots that were never feasible. Kuroza narrows attention to valid windows only.</p>
+                    <p class="text-gray-700 mt-3"><strong>Typical result:</strong> planning conversations start with actionable options instead of timing negotiation.</p>
+                </div>
+                <img src="./public/images/schedule.png" alt="Availability sharing in Kuroza" class="w-full max-w-sm justify-self-center">
+            </div>
+        </section>
+
+        <section id="step-2" class="pb-16">
+            <div class="container max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+                <img src="./public/images/chatplan.png" alt="Planning and coordination in Kuroza" class="w-full max-w-sm justify-self-center lg:order-1">
+                <div class="lg:order-2">
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90">Step 2</p>
+                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Plan and Coordinate in One Place</h3>
+                    <p class="text-lg text-gray-700 mt-5">Discussion stays tied to the actual plan. Members align details, track updates, and confirm decisions without losing context across apps.</p>
+                    <p class="text-gray-600 mt-4">Insight: reducing context switching lowers drop-off and raises decision clarity.</p>
+                    <p class="text-gray-700 mt-5"><strong>What is consolidated:</strong> conversation, decision history, updates, and confirmation state.</p>
+                    <p class="text-gray-700 mt-3"><strong>Why this is effective:</strong> fragmented threads create rework and inconsistent understanding. A single planning context reduces ambiguity.</p>
+                    <p class="text-gray-700 mt-3"><strong>Typical result:</strong> fewer repeated questions and faster agreement on final details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="step-3" class="pb-16">
+            <div class="container max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90">Step 3</p>
+                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Real-Time Location Suggestions</h3>
+                    <p class="text-lg text-gray-700 mt-5">Kuroza suggests meeting spots that balance convenience for the group as a whole, not just the nearest person.</p>
+                    <p class="text-gray-600 mt-4">Insight: location fairness is one of the strongest predictors of attendance consistency.</p>
+                    <p class="text-gray-700 mt-5"><strong>Decision factors:</strong> relative travel effort, venue relevance, timing constraints, and group context.</p>
+                    <p class="text-gray-700 mt-3"><strong>Why this is effective:</strong> when one member consistently absorbs the travel burden, attendance drops over time. Fairness improves commitment.</p>
+                    <p class="text-gray-700 mt-3"><strong>Typical result:</strong> faster venue decisions with fewer objections late in the planning cycle.</p>
+                </div>
+                <img src="./public/images/location.png" alt="Real-time location suggestions in Kuroza" class="w-full max-w-sm justify-self-center">
+            </div>
+        </section>
+
+        <section id="step-4" class="pb-16">
+            <div class="container max-w-6xl grid lg:grid-cols-2 gap-10 items-center">
+                <img src="./public/images/event.png" alt="Automatic event suggestions in Kuroza" class="w-full max-w-sm justify-self-center lg:order-1">
+                <div class="lg:order-2">
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90">Step 4</p>
+                    <h3 class="text-3xl md:text-5xl font-bold text-gray-900 mt-2">Automatic Event Suggestions</h3>
+                    <p class="text-lg text-gray-700 mt-5">Kuroza proposes event options using timing signals and preference history, giving the group high-quality options immediately.</p>
+                    <p class="text-gray-600 mt-4">Insight: better suggestions reduce decision fatigue and improve acceptance rate.</p>
+                    <p class="text-gray-700 mt-5"><strong>Signals used:</strong> prior accepted plans, activity patterns, availability confidence, and recency effects.</p>
+                    <p class="text-gray-700 mt-3"><strong>Why this is effective:</strong> generic ideas force extra filtering. Context-aware suggestions shorten the path to a final yes.</p>
+                    <p class="text-gray-700 mt-3"><strong>Typical result:</strong> groups spend more time choosing among good options and less time generating options from scratch.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="pb-16">
+            <div class="container max-w-6xl border-t border-gray-200 pt-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-gray-900">What changes in practice</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-8 text-gray-700">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Lower planning overhead</h3>
+                        <p class="mb-0">Fewer repetitive messages and fewer dead-end branches in conversation.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Higher decision quality</h3>
+                        <p class="mb-0">Choices are grounded in real availability, context, and group preferences.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">More confirmed plans</h3>
+                        <p class="mb-0">Clearer coordination means higher follow-through and fewer last-minute drop-offs.</p>
+                    </div>
+                </div>
+                <p class="text-lg text-gray-700 mt-10 max-w-4xl">In short: Kuroza doesn’t just help groups talk about plans. It improves the decision system behind planning, so more ideas become real events.</p>
+            </div>
+        </section>
+
+        <section class="section pt-2">
+            <div class="container max-w-4xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Ready to plan with less friction?</h2>
+                <p class="text-lg text-gray-600 mt-4">Download Kuroza and move from idea to confirmed plan in fewer steps.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-7">
+                    <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store" class="h-14 sm:h-16 w-auto" />
+                    <img src="/public/assets/google_play_badge.png" alt="Download on Google Play" class="h-14 sm:h-16 w-auto" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer-component></footer-component>
+</body>
+
+</html>

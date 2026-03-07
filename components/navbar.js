@@ -8,25 +8,25 @@ class NavBar extends HTMLElement {
     }
     render() {
         this.innerHTML = /* html */`
-        <header class="relative z-50 px-4 md:px-6 py-4 md:py-6 flex">
-            <nav class="max-w-7xl mx-auto flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
-                <a href="/" class="text-2xl md:text-3xl font-bold text-gradient flex items-center gap-2 justify-start">
+        <header class="relative z-50 px-4 md:px-6 py-4 md:py-5 flex">
+            <nav class="max-w-7xl mx-auto flex-1 grid grid-cols-2 md:grid-cols-3 gap-4 items-center">
+                <a href="/" class="text-2xl md:text-3xl font-bold text-gradient flex items-center gap-2 justify-start tracking-tight">
                     <img src="/public/assets/Kuroza Icon.png" alt="Kuroza" class="w-8 h-8 md:w-12 md:h-12 rounded-lg">
                     Kuroza
                 </a>
             
                 <ul class="hidden md:flex text-2xl gap-4 flex items-center justify-center">
-                    <li><a href="https://instagram.com/kurozauk" target="_blank">
+                    <li><a href="https://instagram.com/kurozauk" target="_blank" rel="noopener noreferrer">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-instagram"></i>
                         </div>    
                     </a></li>
-                    <li><a href="https://www.tiktok.com/@kuroza_uk" target="_blank">
+                    <li><a href="https://www.tiktok.com/@kuroza_uk" target="_blank" rel="noopener noreferrer">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-tiktok"></i>
                         </div>
                     </a></li>
-                    <li><a href="https://www.linkedin.com/company/kuroza" target="_blank">
+                    <li><a href="https://www.linkedin.com/company/kuroza" target="_blank" rel="noopener noreferrer">
                         <div class="border-2 border-gray-600 text-gray-600 w-12 h-12 grow-0 shrink-0 rounded-full flex items-center justify-center hover:bg-kuroza-red hover:text-white hover:border-kuroza-red transition-colors">
                             <i class="fa-brands fa-linkedin-in"></i>
                         </div>
@@ -36,8 +36,8 @@ class NavBar extends HTMLElement {
                 <ul class="hidden md:flex gap-4 flex items-center justify-end">
                     <li><a href="/about" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">About</a></li>
                     <li><a href="/contact" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Contact</a></li>
-                    <li><a href="/join-us" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Join Us</a></li>
-                    <li><a href="/#download" class="text-white font-semibold bg-kuroza-red py-2 px-4 rounded-lg transition-all ease-in-out duration-300 hover:shadow-[0_0_20px_4px_rgba(220,38,38,0.6)] text-lg">Download</a></li>
+                    <li><a href="/our-team" class="text-gray-600 hover:text-kuroza-red transition-colors font-medium">Our Team</a></li>
+                    <li><a href="/#download" class="text-white font-semibold bg-kuroza-red py-2 px-4 rounded-lg transition-all ease-in-out duration-300 hover:shadow-[0_10px_28px_rgba(217,45,45,0.38)] text-lg">Download</a></li>
                 </ul>
             
                 <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg flex justify-end">
@@ -86,11 +86,11 @@ class NavBar extends HTMLElement {
                             </a>
                         </li>
                         <li>
-                            <a href="/join-us" class="flex items-center gap-3 py-3 px-4 text-gray-700 hover:text-kuroza-red hover:bg-kuroza-red/5 rounded-lg transition-all duration-200 font-medium">
+                            <a href="/our-team" class="flex items-center gap-3 py-3 px-4 text-gray-700 hover:text-kuroza-red hover:bg-kuroza-red/5 rounded-lg transition-all duration-200 font-medium">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
                                 </svg>
-                                Join Us
+                                Our Team
                             </a>
                         </li>
                         <li>

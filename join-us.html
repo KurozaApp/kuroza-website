@@ -4,19 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Us | Kuroza</title>
+    <title>Our Team | Kuroza</title>
 
-    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
     <link rel="stylesheet" href="/public/stylesheets/common.css">
 
-    <!-- Components -->
     <script src="/components/navbar.js"></script>
     <script src="/components/footer.js"></script>
-
-    <!-- Tailwind -->
+    <script src="/components/team.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -24,132 +21,22 @@
     <script src="/public/scripts/tailwind-config.js"></script>
 </head>
 
-<body class="light-bg font-manrope text-gray-800 min-h-screen">
-    <navbar-component />
+<body class="light-bg text-gray-800 min-h-screen">
+    <navbar-component></navbar-component>
 
-    <section class="relative px-4 sm:px-6 md:px-8 lg:px-12 py-16 md:py-20 lg:py-24 overflow-hidden">
-        <!-- Background -->
-        <div class="absolute inset-0 overflow-hidden -z-10">
-            <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+    <main>
+        <section class="section pb-10">
+            <div class="container max-w-5xl text-center">
+                <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90 mb-4">Our Team</p>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-900">People Behind Kuroza</h1>
+                <p class="text-lg md:text-2xl text-gray-600 mt-6 max-w-3xl mx-auto">Meet the team building a smarter, simpler way for groups to plan together.</p>
             </div>
-            <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
-            </div>
-        </div>
+        </section>
 
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 text-gray-900">Join Us</h1>
+        <team-component></team-component>
+    </main>
 
-        <div class="flex flex-col md:flex-row md:gap-12 items-start max-w-6xl mx-auto">
-            <form id="join-form" action="/api/join" method="POST"
-                class="w-full md:w-1/2 flex flex-col space-y-4 card p-8 backdrop-blur-sm">
-
-                <div class="hidden"><input name="bot-field" type="text"></div>
-
-                <input type="text" name="name" placeholder="Your Name" required
-                    class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50" />
-
-                <input type="email" name="email" placeholder="Your Email" required
-                    class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50" />
-
-                <textarea name="message" placeholder="Optional Message" rows="5"
-                    class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50"></textarea>
-
-                <button type="submit" class="cta-button bg-gradient-to-r from-kuroza-red to-red-500 text-white p-3 rounded-lg font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-300">Join
-                    Now</button>
-            </form>
-
-            <div class="w-full md:w-1/2 mt-8 md:mt-0 text-gray-700 text-base sm:text-lg leading-relaxed">
-                <h2 class="text-2xl sm:text-3xl font-semibold text-gray-900 mb-4">Become Part of Kuroza</h2>
-
-                <p class="mb-3">
-                    We're excited to welcome new members to our community! Whether you're interested in contributing,
-                    learning, or collaborating, we'd love to hear from you.
-                </p>
-                <p class="mb-3">
-                    Fill out the form with your details, and let us know a bit about yourself. Your information helps us
-                    understand how we can best engage and support you.
-                </p>
-                <p class="mb-3">
-                    Joining is simple, and you'll be part of a growing team of passionate individuals.
-                </p>
-                <p class="font-medium text-kuroza-red">
-                    Don't wait—take the first step and join us today!
-                </p>
-            </div>
-        </div>
-    </section>
-    <script>
-        document.querySelector("form[name='contact']").addEventListener("submit", function (e) {
-            const botField = this.querySelector("[name='bot-field']");
-            if (botField.value) {
-                e.preventDefault(); // prevent submission if bot detected
-                console.log("Bot detected");
-            }
-        });
-    </script>
-
-    <footer-component />
-
-    <div id="toast-container" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
-
-    <script>
-        function showToast(message, type = "success") {
-            const container = document.getElementById("toast-container");
-            const toast = document.createElement("div");
-
-            toast.className = `transform transition-all duration-500 opacity-0 translate-y-4 
-                     px-4 py-3 rounded-lg shadow-md text-white ${type === "success" ? "bg-green-500" : "bg-red-500"
-                }`;
-            toast.textContent = message;
-
-            container.appendChild(toast);
-
-            // Trigger slide-in
-            requestAnimationFrame(() => {
-                toast.classList.remove("opacity-0", "translate-y-4");
-                toast.classList.add("opacity-100", "translate-y-0");
-            });
-
-            // Slide-out after 3s
-            setTimeout(() => {
-                toast.classList.remove("opacity-100", "translate-y-0");
-                toast.classList.add("opacity-0", "translate-y-4");
-
-                setTimeout(() => toast.remove(), 500); // wait for animation
-            }, 3000);
-        }
-
-        document.getElementById("join-form").addEventListener("submit", async function (e) {
-            e.preventDefault();
-
-            const form = e.target;
-            const formData = new FormData(form);
-
-            // Honeypot check
-            if (formData.get("bot-field")) {
-                console.log("Bot detected");
-                return;
-            }
-
-            try {
-                const res = await fetch(form.action, {
-                    method: "POST",
-                    body: new URLSearchParams(formData)
-                });
-
-                const data = await res.json();
-
-                if (data.success) {
-                    showToast("✅ Request submitted successfully!", "success");
-                    form.reset();
-                } else {
-                    showToast("❌ Failed to submit request.", "error");
-                }
-            } catch (err) {
-                console.error(err);
-                showToast("⚠️ An error occurred. Please try again.", "error");
-            }
-        });
-    </script>
+    <footer-component></footer-component>
 </body>
 
 </html>

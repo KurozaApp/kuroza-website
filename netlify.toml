@@ -40,13 +40,33 @@ to = "/join-us.html"
 status = 200
 
 [[redirects]]
-from = "/locations"
-to = "/locations.html"
+from = "/our-team"
+to = "/join-us.html"
 status = 200
 
 [[redirects]]
+from = "/locations"
+to = "/features-overview"
+status = 302
+
+[[redirects]]
 from = "/event-suggestions"
-to = "/event-suggestions.html"
+to = "/features-overview"
+status = 302
+
+[[redirects]]
+from = "/availability-sharing"
+to = "/features-overview"
+status = 302
+
+[[redirects]]
+from = "/in-app-chat"
+to = "/features-overview"
+status = 302
+
+[[redirects]]
+from = "/features-overview"
+to = "/features-overview.html"
 status = 200
 
 [[redirects]]

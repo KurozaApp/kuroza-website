@@ -4,303 +4,199 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuroza - Smart Social Planning</title>
+    <title>Kuroza - Social made simple</title>
 
-    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
-
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
     <link rel="stylesheet" href="/public/stylesheets/common.css">
 
-    <!-- Components -->
     <script src="/components/navbar.js"></script>
     <script src="/components/footer.js"></script>
-    <script src="/components/team.js"></script>
-
-    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Open Graph / Social Meta Tags -->
-    <meta property="og:title" content="Kuroza - Smart Social Planning">
-    <meta property="og:description"
-        content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
+    <meta property="og:title" content="Kuroza - Social made simple">
+    <meta property="og:description" content="The advanced social app for seamless group meetups.">
     <meta property="og:image" content="https://kuroza.co.uk/public/assets/KurozaBanner.png">
     <meta property="og:url" content="https://kuroza.co.uk/">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Kuroza">
 
-    <!-- Twitter Card Meta -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Kuroza - Smart Social Planning">
-    <meta name="twitter:description"
-        content="The advanced social app for seamless group meetups. Kuroza automatically creates perfect event suggestions by analyzing your group's availability, preferences, and locations.">
+    <meta name="twitter:title" content="Kuroza - Social made simple">
+    <meta name="twitter:description" content="The advanced social app for seamless group meetups.">
     <meta name="twitter:image" content="https://kuroza.co.uk/public/assets/KurozaBanner.png">
 
     <script src="/public/scripts/tailwind-config.js"></script>
-    <script src="/public/scripts/scroll-animations.js"></script>
 </head>
-<!-- Trigger -->
-<body class="light-bg font-manrope text-gray-800 min-h-screen">
-    <navbar-component />
-    <!-- Hero Section -->
-    <section class="relative py-12 md:py-16 lg:py-20">
-        <!-- Full-width image row on larger screens -->
-        <div class="lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full -z-0">
-            <div class="hidden lg:block relative w-full h-full overflow-hidden">
-                <img src="./public/images/hero.jpg" class="w-full h-[600px] object-cover" alt="Hero">
-                <div class="absolute inset-0 bg-gradient-to-r from-[#eeeaea] via-[#eeeaea]/70 to-transparent"></div>
-            </div>
-        </div>
 
-        <!-- Content with proper padding -->
-        <div class="relative z-10 px-4 sm:px-6 md:px-8 lg:px-12 py-12 md:py-16 lg:py-20">
-            <div class="max-w-7xl mx-auto">
-                <!-- Background decorative elements -->
-                <div class="absolute inset-0 overflow-hidden -z-10">
-                    <div class="absolute top-1/4 left-1/4 w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
+<body class="light-bg text-gray-800 min-h-screen">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-white px-3 py-2 rounded-lg shadow">Skip to main content</a>
+    <navbar-component></navbar-component>
+
+    <main id="main-content">
+        <section class="hero-shell">
+            <div class="container grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                <div>
+                    <p class="text-sm font-semibold uppercase tracking-[0.14em] text-kuroza-red/90 mb-5">The AI-powered social planner</p>
+                    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-gray-900 leading-[0.98]">
+                        Social planning,
+                        <span class="text-gradient">without the chaos.</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 mt-5 max-w-xl">
+                        Kuroza handles availability, event ideas, and coordination so your group can spend less time planning and more time together.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 mt-7">
+                        <a href="#download" class="cta-button text-lg px-6">Download app</a>
+                        <a href="#features" class="btn btn-secondary text-base">See how it works</a>
                     </div>
-                    <div class="absolute bottom-1/4 right-1/4 w-48 h-48 sm:w-96 sm:h-96 bg-kuroza-red/5 rounded-full blur-3xl">
-                    </div>
+
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <!-- Left content -->
-                    <div>
-                        <h2 class="text-5xl sm:text-6xl font-bold mb-4 text-kuroza-red flex items-center gap-2 md:gap-4 justify-start">
-                            <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Icon"
-                                class="inline-block rounded-lg md:rounded-2xl md:w-16 md:h-16 w-8 h-8">
-                            Kuroza
-                        </h2>
-                        <p class="text-4xl md:text-5xl text-gray-700 mb-6 font-semibold">Social made simple.</p>
-                        <p class="text-2xl text-gray-600 mb-8">An intelligent app that handles every step of planning, from checking availability to confirming plans - so all you need to do is show up.</p>
-                        <a href="#features"
-                            class="cta-button inline-flex bg-gradient-to-r from-kuroza-red to-red-500 text-white text-lg md:text-xl font-semibold rounded-xl px-6 py-3 cursor-pointer hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 items-center gap-3">
-                            Explore How
-                            <svg width="28" height="22" viewBox="0 0 28 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.59635 0.996155C4.30409 0.636857 6.07649 0.735643 7.73372 1.28249C9.39095 1.82934 10.8741 2.80479 12.0326 4.10989C14.0432 6.44848 15.294 10.4238 13.8548 13.3447C13.2411 14.5891 11.9683 15.6583 10.4966 15.2067C9.79306 14.941 9.22203 14.4096 8.90639 13.727C8.59076 13.0444 8.55581 12.2651 8.80899 11.557C9.95227 8.28211 14.4027 7.98138 17.0579 9.14066C20.8326 10.7877 22.5843 14.6574 23.7113 18.3724C24.0978 19.6653 22.0439 20.0392 21.6554 18.773C20.8143 16.0207 19.5773 12.9338 16.9407 11.4084C15.7755 10.7044 14.3986 10.4354 13.0541 10.6492C12.3577 10.7618 11.7102 11.0778 11.193 11.5575C10.8925 11.8575 10.2248 13.1068 11.1215 13.2193C11.585 13.2542 11.9333 12.438 12.0473 12.1149C12.2574 11.4102 12.3134 10.6686 12.2113 9.94033C12.0849 8.50393 11.5688 7.12929 10.7185 5.96471C9.82683 4.77838 8.61442 3.87202 7.2242 3.35264C5.83397 2.83327 4.324 2.72259 2.87289 3.03368C2.6106 3.06561 2.34602 2.99707 2.13221 2.84182C1.91839 2.68657 1.77128 2.45614 1.72045 2.19685C1.66961 1.93755 1.71882 1.66862 1.85818 1.44413C1.99754 1.21964 2.21674 1.05623 2.47168 0.986752L2.59635 0.996155Z" fill="#ffffff" />
-                                <path d="M16.8219 16.155L23.0033 20.2667L26.4339 14.3878" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </a>
-                    </div>
+                <div class="flex justify-center lg:justify-end">
+                    <img src="./public/images/chatplan.png" alt="Kuroza phone app preview" class="w-full max-w-lg lg:max-w-2xl object-contain drop-shadow-2xl">
+                </div>
+            </div>
+        </section>
 
-                    <!-- Mobile hero image (visible only on small/medium screens) -->
-                    <div class="lg:hidden w-full flex items-center justify-center">
-                        <div class="relative w-full">
-                            <img src="./public/images/hero.jpg" class="w-full rounded-3xl shadow-2xl shadow-black/30 saturate-125">
-                            <div class="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        <section id="features" class="section">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">How Kuroza works</h2>
+                    <p class="text-lg text-gray-600 mt-4 mb-0">A clean flow from free-time check to confirmed plans.</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+                    <div class="block lg:sticky lg:top-24 mb-4 lg:mb-0">
+                        <div class="phone-stage">
+                            <img id="feature-phone-image" src="./public/images/schedule.png" alt="Kuroza feature preview on phone" class="phone-screen-image">
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-
-    <!-- Features Section -->
-    <section id="features"
-        class="px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 bg-white/50 backdrop-blur-sm border-y border-gray-200">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-12 sm:mb-16">
-                <h2
-                    class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800 flex flex-col sm:flex-row items-center gap-2 sm:gap-4 justify-center">
-                    <span>Why Choose</span>
-                    <div class="flex items-center gap-2">
-                        <img src="/public/assets/Kuroza Icon.png" alt="Kuroza Logo"
-                            class="w-8 h-8 sm:w-10 sm:w-12 h-10 sm:h-12 rounded-lg">
-                        <span>Kuroza?</span>
-                    </div>
-                </h2>
-                <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-                    Revolutionary features that make group planning effortless and enjoyable
-                </p>
-            </div>
-
-            <!-- Background  -->
-            <div class="absolute inset-0 overflow-hidden -z-10">
-                <div
-                    class="absolute top-[15%] left-[55%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
-                </div>
-                <div
-                    class="absolute top-[37.5%] left-[25%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
-                </div>
-                <div
-                    class="absolute bottom-[5%] left-[25%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
-                </div>
-                <div
-                    class="absolute bottom-[27%] left-[55%] w-32 h-32 sm:w-72 sm:h-72 bg-kuroza-red/10 rounded-full blur-3xl">
-                </div>
-            </div>
-
-            <!-- Feature Sections -->
-            <div class="flex flex-col gap-48 mt-48 md:mt-0 md:gap-24">
-                <!-- Feature 1: Tell Kuroza When You're Free -->
-                <div class="fade-in">
-                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Tell Kuroza when you're free</div>
-                    <div class="grid gap-4 md:grid-cols-2 items-center">
-                        <div class="px-8">
-                            <div class="text-lg md:text-2xl font-semibold mb-4">
-                                One tap to share when you're free.
-                            </div>
+                    <div class="why-layout">
+                        <article class="why-row feature-step active cursor-pointer" data-image="./public/images/schedule.png" role="button" tabindex="0" aria-label="Show Share availability preview">
                             <div>
-                                <ul>
-                                    <li class="">Block out your schedule once, and let the app handle the rest.</li>
-                                    <li class="">No more endless "when are you free?" texts.</li>
-                                    <li class="text-center md:text-left">
-                                        <div class="text-center md:text-left mt-4">
-                                            <a href="/#download"
-                                                class="inline-block bg-kuroza-red text-white font-semibold px-6 py-2 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-200 text-xl inline-flex items-center gap-2">
-                                                Learn More
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </a>
-                                        </div>
-                                        <!-- <a href="/#download"
-                                            class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
-                                            Download now
-                                        </a> -->
-                                    </li>
-                                </ul>
+                                <p class="why-kicker">Step 1</p>
+                                <h3 class="why-title">Share availability</h3>
                             </div>
-                        </div>
-                        <div class="order-first flex items-center justify-center">
-                            <img src="./public/images/schedule.png" alt="Feature 1: Share Availability">
-                        </div>
-                    </div>
-                </div>
+                            <p class="why-copy">Block your schedule once and stop the endless "when are you free?" loop.</p>
+                            <span class="why-icon"><i class="fa-regular fa-calendar-check"></i></span>
+                        </article>
 
-                <!-- Feature 2: Smart Plans / Event Suggestions -->
-                <div class="fade-in">
-                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Smart plans, suggested for you
-                    </div>
-                    <div class="grid gap-4 md:grid-cols-2 items-center">
-                        <div class="px-8">
-                            <div class="text-lg md:text-2xl font-semibold mb-4">
-                                Smart suggestions for your group
+                        <article class="why-row feature-step cursor-pointer" data-image="./public/images/chatplan.png" role="button" tabindex="0" aria-label="Show Plan and coordinate preview">
+                            <div>
+                                <p class="why-kicker">Step 2</p>
+                                <h3 class="why-title">Plan and coordinate in one place</h3>
                             </div>
-                            <div class="">
-                                The app finds the best time for everyone and suggest hangouts automatically, taking the
-                                hassle out of planning.
-                                <div class="text-center md:text-left mt-4">
-                                    <a href="/event-suggestions"
-                                        class="inline-block bg-kuroza-red text-white font-semibold px-6 py-2 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-200 text-xl inline-flex items-center gap-2">
-                                        Learn More
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center justify-center"><img src="./public/images/event.png"
-                                alt="Feature 2: Smart plans"></div>
-                    </div>
-                </div>
+                            <p class="why-copy">Discuss details, assign decisions, and keep your whole group aligned in one thread.</p>
+                            <span class="why-icon"><i class="fa-regular fa-comments"></i></span>
+                        </article>
 
-                <!-- Feature 3: Plan and Chat -->
-                <div class="fade-in">
-                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Plan and chat, all in-app</div>
-                    <div class="grid gap-4 md:grid-cols-2 items-center">
-                        <div class="px-8">
-                            <div class="text-lg md:text-2xl font-semibold mb-4">
-                                Chat and plan together.
+                        <article class="why-row feature-step cursor-pointer" data-image="./public/images/location.png" role="button" tabindex="0" aria-label="Show Real-time location suggestions preview">
+                            <div>
+                                <p class="why-kicker">Step 3</p>
+                                <h3 class="why-title">Get real-time location suggestions</h3>
                             </div>
-                            <div class="">
-                                <ul>
-                                    <li class="">Discuss details, share updates, and confirm plans—all in one place.
-                                    </li>
-                                    <li class="">No more juggling multiple group chats.</li>
-                                </ul>
-                                <div class="text-center md:text-left mt-4">
-                                    <a href="/#download"
-                                        class="inline-block bg-kuroza-red text-white font-semibold px-6 py-2 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-200 text-xl inline-flex items-center gap-2">
-                                        Learn More
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                    <!-- <a href="/#download"
-                                        class="mt-4 inline-block bg-kuroza-red text-white font-semibold px-4 py-2 rounded-lg hover:bg-kuroza-dark-red transition-colors duration-200 text-xl">
-                                        Download now
-                                    </a> -->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="order-first flex items-center justify-center">
-                            <img src="./public/images/chatplan.png" alt="Feature 3: In-app Chat">
-                        </div>
-                    </div>
-                </div>
+                            <p class="why-copy">See meeting spots that are practical for everyone based on group context.</p>
+                            <span class="why-icon"><i class="fa-solid fa-location-dot"></i></span>
+                        </article>
 
-                <!-- Feature 4: Plan Your Own Way / Locations -->
-                <div class="fade-in">
-                    <div class="text-2xl md:text-4xl text-center font-semibold mb-4">Find locations near you</div>
-                    <div class="grid gap-4 md:grid-cols-2 items-center">
-                        <div class="px-8">
-                            <div class="text-lg md:text-2xl font-semibold mb-4">
-                                Smart location discovery.
+                        <article class="why-row feature-step cursor-pointer" data-image="./public/images/event.png" role="button" tabindex="0" aria-label="Show Smart event suggestions preview">
+                            <div>
+                                <p class="why-kicker">Step 4</p>
+                                <h3 class="why-title">Get automatic event suggestions</h3>
                             </div>
-                            <div class="">
-                                Kuroza intelligently suggests meeting locations that are fair and convenient for
-                                everyone
-                                in your group.
-                                <div class="text-center md:text-left mt-4">
-                                    <a href="/locations"
-                                        class="inline-block bg-kuroza-red text-white font-semibold px-6 py-2 rounded-lg hover:shadow-lg hover:-translate-y-1 transition-all duration-200 text-xl inline-flex items-center gap-2">
-                                        Learn More
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
+                            <p class="why-copy">Kuroza recommends event ideas based on your group’s preferences and timing.</p>
+                            <span class="why-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+                        </article>
+
+                        <div class="pt-2">
+                            <a href="/features-overview" class="cta-button">Explore features <i class="fa-solid fa-arrow-right"></i></a>
                         </div>
-                        <div class="flex items-center justify-center"><img src="./public/images/location.png"
-                                alt="Feature 4: Find Locations"></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="px-4 sm:px-6 md:px-8 lg:px-12 py-12 sm:py-16 md:py-20 red-bg fade-in" id="download">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-2xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-white px-2">The smarter way to plan
-                with your friends is here</h2>
-            <p class="text-lg sm:text-xl text-white/90 mb-8 sm:mb-12 max-w-2xl mx-auto px-2">
-                Download the app now and turn free time into real plans.
-            </p>
+        <section class="section red-bg" id="download">
+            <div class="container text-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-white max-w-3xl mx-auto">The smarter way to plan with friends</h2>
+                <p class="text-lg sm:text-xl text-white/90 mt-4 max-w-2xl mx-auto">Download Kuroza and turn free time into real plans.</p>
 
-            <div class="flex flex-col sm:flex-row mb-6 sm:mb-8 items-center justify-center gap-4">
-                <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store"
-                    class="h-[16vw] sm:h-20 w-auto transition-transform duration-300 hover:scale-105" />
-                <img src="/public/assets/google_play_badge.png" alt="Download on Google Play"
-                    class="h-[16vw] sm:h-20 w-auto transition-transform duration-300 hover:scale-105" />
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                    <img src="/public/assets/app_store_badge.svg" alt="Download on the App Store" class="h-14 sm:h-16 w-auto" />
+                    <img src="/public/assets/google_play_badge.png" alt="Download on Google Play" class="h-14 sm:h-16 w-auto" />
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <footer-component />
+    <footer-component></footer-component>
     <script>
-        function learnMore() {
-            document.getElementById('features').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+        const featureImage = document.getElementById("feature-phone-image");
+        const featureSteps = Array.from(document.querySelectorAll(".feature-step"));
 
-        function getStarted() {
-            // In a real application, this would redirect to the app or sign-up page
-            alert('🚀 Ready to revolutionize your group planning? Contact us to get started!');
-        }
+        if (featureImage && featureSteps.length) {
+            let activeStep = featureSteps[0];
+            let clickPriorityUntil = 0;
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
+            function setActiveStep(step) {
+                if (!step || step === activeStep) return;
+                const nextImage = step.getAttribute("data-image");
+                if (!nextImage) return;
+
+                featureImage.src = nextImage;
+                featureSteps.forEach((item) => item.classList.remove("active"));
+                step.classList.add("active");
+                activeStep = step;
+            }
+
+            const observer = new IntersectionObserver(
+                () => {
+                    if (Date.now() < clickPriorityUntil) return;
+                    const viewportCenter = window.innerHeight * 0.42;
+                    let closestStep = activeStep;
+                    let closestDistance = Number.POSITIVE_INFINITY;
+
+                    featureSteps.forEach((step) => {
+                        const rect = step.getBoundingClientRect();
+                        const stepCenter = rect.top + rect.height / 2;
+                        const distance = Math.abs(stepCenter - viewportCenter);
+
+                        if (rect.bottom > 0 && rect.top < window.innerHeight && distance < closestDistance) {
+                            closestDistance = distance;
+                            closestStep = step;
+                        }
                     });
+
+                    setActiveStep(closestStep);
+                },
+                {
+                    root: null,
+                    threshold: [0, 0.15, 0.3, 0.5, 0.75, 1],
+                    rootMargin: "-15% 0px -20% 0px"
                 }
+            );
+
+            featureSteps.forEach((step) => observer.observe(step));
+            setActiveStep(activeStep);
+
+            featureSteps.forEach((step) => {
+                step.addEventListener("click", () => {
+                    clickPriorityUntil = Date.now() + 2000;
+                    setActiveStep(step);
+                });
+                step.addEventListener("keydown", (event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        clickPriorityUntil = Date.now() + 2000;
+                        setActiveStep(step);
+                    }
+                });
             });
-        });
+        }
     </script>
 </body>
 

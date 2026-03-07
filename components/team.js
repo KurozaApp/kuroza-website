@@ -52,15 +52,6 @@ class TeamComponent extends HTMLElement {
         this.innerHTML = `
             <section id="our-team" class="section bg-white/50 backdrop-blur-sm fade-in">
                 <div class="container max-w-5xl mx-auto">
-                    <div class="text-center mb-12 sm:mb-16">
-                        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-gray-800">
-                            Meet the Team
-                        </h2>
-                        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-2">
-                            Passionate individuals dedicated to making group planning effortless for everyone
-                        </p>
-                    </div>
-
                     <!-- Team Grid -->
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                         ${teamMembersHTML}

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Kuroza</title>
 
-    <link rel="shortcut icon" href="./public/assets/Kuroza Icon.png" type="image/x-icon">
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
 
     <link rel="stylesheet" href="/public/stylesheets/common.css">
 
@@ -42,13 +43,16 @@
 
         <div class="flex flex-col md:flex-row md:gap-12 items-start max-w-6xl mx-auto">
             <form id="contact-form" method="POST" action="/api/contact"
-                class="w-full md:w-1/2 flex flex-col space-y-4 card p-8 backdrop-blur-sm">
+                class="w-full md:w-1/2 flex flex-col space-y-3 card p-8 backdrop-blur-sm">
                 <div class="hidden"><input name="bot-field" type="text"></div>
-                <input type="text" name="name" placeholder="Your Name" required
+                <label for="contact-name" class="text-sm font-semibold text-gray-700">Name</label>
+                <input id="contact-name" type="text" name="name" placeholder="Your Name" required autocomplete="name"
                     class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50" />
-                <input type="email" name="email" placeholder="Your Email" required
+                <label for="contact-email" class="text-sm font-semibold text-gray-700">Email</label>
+                <input id="contact-email" type="email" name="email" placeholder="Your Email" required autocomplete="email"
                     class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50" />
-                <textarea name="message" placeholder="Your Message" rows="5"
+                <label for="contact-message" class="text-sm font-semibold text-gray-700">Message</label>
+                <textarea id="contact-message" name="message" placeholder="Your Message" rows="5"
                     class="border border-gray-300 p-3 rounded-lg focus:ring-2 focus:ring-kuroza-red focus:outline-none focus:border-transparent transition bg-white/50"></textarea>
                 <button type="submit"
                     class="cta-button bg-gradient-to-r from-kuroza-red to-red-500 text-white p-3 rounded-lg font-semibold hover:shadow-lg hover:-translate-y-1 transition-all duration-300">Send Message</button>
@@ -75,16 +79,6 @@
 
         </div>
     </section>
-    <script>
-        document.querySelector("form[name='contact']").addEventListener("submit", function (e) {
-            const botField = this.querySelector("[name='bot-field']");
-            if (botField.value) {
-                e.preventDefault(); // prevent submission if bot detected
-                console.log("Bot detected");
-            }
-        });
-    </script>
-
     <footer-component />
     <div id="toast-container" class="fixed bottom-4 right-4 space-y-2 z-50"></div>
     <script>
