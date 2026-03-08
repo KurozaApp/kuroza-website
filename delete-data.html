@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuroza Data Deletion Request</title>
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/public/scripts/tailwind-config.js"></script>
+</head>
+
+<body class="light-bg text-gray-800 min-h-screen">
+    <navbar-component></navbar-component>
+
+    <main class="section">
+        <div class="container max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Request data deletion</h1>
+            <p class="text-lg text-gray-600 mt-4">Use this flow to request deletion of personal data while keeping account access where policy allows.</p>
+
+            <form id="deletion-form" class="card p-6 md:p-8 mt-8 space-y-4" novalidate>
+                <input type="hidden" name="type" value="data">
+                <div>
+                    <label for="email" class="text-sm font-semibold text-gray-700">Email (required)</label>
+                    <input id="email" name="email" type="email" required autocomplete="email" class="mt-2 w-full border border-gray-300 p-3 rounded-lg focus:outline-none" placeholder="you@example.com">
+                </div>
+                <div>
+                    <label for="username" class="text-sm font-semibold text-gray-700">Username (optional)</label>
+                    <input id="username" name="username" type="text" autocomplete="username" class="mt-2 w-full border border-gray-300 p-3 rounded-lg focus:outline-none" placeholder="@yourusername">
+                </div>
+                <p class="text-sm text-gray-500">If an account exists for this email, we will send a confirmation link. For privacy, the response is the same either way.</p>
+                <button type="submit" class="cta-button">Send data deletion link</button>
+                <p id="status" class="text-sm"></p>
+            </form>
+
+            <section class="mt-10 space-y-4 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900">What this does</h2>
+                <p>After confirmation, we delete personal profile data and user-owned personal records. Your login may remain active if required for account integrity and compliance.</p>
+                <p><strong>Retention:</strong> minimal non-personal audit/security records may be retained up to 180 days.</p>
+                <p><strong>Processing time:</strong> normally immediate to 7 days depending on background cleanup.</p>
+                <p>Need help? Contact <a href="mailto:contact@kuroza.co.uk" class="text-kuroza-red font-semibold">contact@kuroza.co.uk</a>.</p>
+                <p><a href="/privacy-policy" class="text-kuroza-red font-semibold">Privacy Policy</a> · <a href="/terms-of-service" class="text-kuroza-red font-semibold">Terms of Service</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer-component></footer-component>
+
+    <script>
+        async function submitDeletionRequest(event) {
+            event.preventDefault();
+            const form = event.target;
+            const status = document.getElementById("status");
+            const email = form.email.value.trim();
+            const username = form.username.value.trim();
+            const type = form.type.value;
+
+            status.className = "text-sm text-gray-600";
+            status.textContent = "Sending request...";
+
+            try {
+                const res = await fetch("/api/deletion/request", {
+                    method: "POST",
+                    headers: { "content-type": "application/json" },
+                    body: JSON.stringify({ email, username, type, captchaToken: await getCaptchaToken() })
+                });
+
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || "Unable to submit request.");
+
+                status.className = "text-sm text-green-700";
+                status.textContent = data.message || "If an account is associated with that email, we have sent a confirmation link.";
+                form.reset();
+            } catch (err) {
+                status.className = "text-sm text-red-700";
+                status.textContent = err.message || "Something went wrong. Please try again.";
+            }
+        }
+
+        async function getCaptchaToken() {
+            const siteKey = window.KUROZA_RECAPTCHA_SITE_KEY || "";
+            if (!siteKey) return "";
+
+            if (!window.grecaptcha) {
+                await new Promise((resolve, reject) => {
+                    const script = document.createElement("script");
+                    script.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+                    script.async = true;
+                    script.defer = true;
+                    script.onload = resolve;
+                    script.onerror = reject;
+                    document.head.appendChild(script);
+                });
+            }
+
+            return await window.grecaptcha.execute(siteKey, { action: "deletion_request" });
+        }
+
+        document.getElementById("deletion-form").addEventListener("submit", submitDeletionRequest);
+    </script>
+</body>
+
+</html>

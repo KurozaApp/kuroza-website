@@ -23,6 +23,16 @@ from = "/api/deploy"
 to = "/.netlify/functions/deploy-discord"
 status = 200
 
+[[redirects]]
+from = "/api/deletion/request"
+to = "/.netlify/functions/deletion-request"
+status = 200
+
+[[redirects]]
+from = "/api/deletion/confirm"
+to = "/.netlify/functions/deletion-confirm"
+status = 200
+
 # Frontend stuff
 [[redirects]]
 from = "/about"
@@ -67,6 +77,26 @@ status = 302
 [[redirects]]
 from = "/features-overview"
 to = "/features-overview.html"
+status = 200
+
+[[redirects]]
+from = "/delete-account"
+to = "/delete-account.html"
+status = 200
+
+[[redirects]]
+from = "/delete-data"
+to = "/delete-data.html"
+status = 200
+
+[[redirects]]
+from = "/delete-account/confirm"
+to = "/delete-account-confirm.html"
+status = 200
+
+[[redirects]]
+from = "/delete-data/confirm"
+to = "/delete-data-confirm.html"
 status = 200
 
 [[redirects]]

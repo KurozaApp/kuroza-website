@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete your Kuroza account</title>
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+    <script src="/public/scripts/tailwind-config.js"></script>
+</head>
+
+<body class="light-bg text-gray-800 min-h-screen">
+    <navbar-component></navbar-component>
+
+    <main class="section">
+        <div class="container max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Delete your Kuroza account</h1>
+            <p class="text-lg text-gray-600 mt-4">Follow these steps in the app to permanently delete your account.</p>
+
+            <section class="mt-12 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Delete in the app</h2>
+                <ol class="list-decimal pl-5 space-y-3">
+                    <li>Open <strong>Profile</strong>.</li>
+                    <li>Tap <strong>Delete Account</strong>.</li>
+                    <li>Enter your password and confirm.</li>
+                    <li>Your account is deleted and you are signed out.</li>
+                </ol>
+            </section>
+
+            <section class="mt-12 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">What gets deleted</h2>
+                <ul class="list-disc pl-5 space-y-3">
+                    <li>Your Kuroza login account (Firebase Auth).</li>
+                    <li>Your user profile in Firestore.</li>
+                    <li>Your profile picture and owned group images.</li>
+                    <li>Your chat and group membership links.</li>
+                    <li>Your event participation data. Events you created are cancelled.</li>
+                </ul>
+            </section>
+
+            <section class="mt-12 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">What may be kept</h2>
+                <p>We may retain minimal legal, fraud-prevention, and security records for up to 180 days where required or permitted by law.</p>
+            </section>
+
+            <section class="mt-12 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Processing time</h2>
+                <p>Deletion starts right after confirmation and is usually completed within 7 days.</p>
+            </section>
+
+            <section class="mt-12 text-gray-700">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Need help?</h2>
+                <p>If you cannot access the app and need support with deletion, contact <a href="mailto:contact@kuroza.co.uk" class="text-kuroza-red font-semibold">contact@kuroza.co.uk</a>.</p>
+            </section>
+
+            <section class="mt-12 text-gray-700">
+                <p><a href="/privacy-policy" class="text-kuroza-red font-semibold">Privacy Policy</a> · <a href="/terms-of-service" class="text-kuroza-red font-semibold">Terms of Service</a></p>
+            </section>
+        </div>
+    </main>
+
+    <footer-component></footer-component>
+</body>
+
+</html>

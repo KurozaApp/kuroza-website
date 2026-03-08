@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Account Deletion | Kuroza</title>
+    <link rel="icon" type="image/png" href="/public/assets/Kuroza Icon.png">
+    <link rel="apple-touch-icon" href="/public/assets/Kuroza Icon.png">
+    <link rel="stylesheet" href="/public/stylesheets/common.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/components/navbar.js"></script>
+    <script src="/components/footer.js"></script>
+</head>
+
+<body class="light-bg text-gray-800 min-h-screen">
+    <navbar-component></navbar-component>
+    <main class="section">
+        <div class="container max-w-3xl">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900">Confirm account deletion</h1>
+            <p class="text-lg text-gray-600 mt-4">Press confirm to continue. This link can only be used once.</p>
+            <div class="card p-6 md:p-8 mt-8">
+                <button id="confirm-btn" class="cta-button">Confirm account deletion</button>
+                <p id="status" class="text-sm mt-4"></p>
+            </div>
+        </div>
+    </main>
+    <footer-component></footer-component>
+    <script>
+        async function confirmDeletion() {
+            const params = new URLSearchParams(window.location.search);
+            const token = params.get("token") || "";
+            const status = document.getElementById("status");
+            const button = document.getElementById("confirm-btn");
+
+            if (!token) {
+                status.className = "text-sm text-red-700 mt-4";
+                status.textContent = "Invalid or missing token. Please request a new deletion email.";
+                button.disabled = true;
+                return;
+            }
+
+            button.disabled = true;
+            status.className = "text-sm text-gray-600 mt-4";
+            status.textContent = "Processing...";
+
+            try {
+                const res = await fetch("/api/deletion/confirm", {
+                    method: "POST",
+                    headers: { "content-type": "application/json" },
+                    body: JSON.stringify({ token })
+                });
+                const data = await res.json();
+                if (!res.ok) throw new Error(data.error || "Unable to confirm request.");
+
+                status.className = "text-sm text-green-700 mt-4";
+                status.textContent = data.message || "Deletion confirmed and being processed.";
+            } catch (err) {
+                status.className = "text-sm text-red-700 mt-4";
+                status.textContent = err.message || "Unable to confirm request.";
+                button.disabled = false;
+            }
+        }
+
+        document.getElementById("confirm-btn").addEventListener("click", confirmDeletion);
+    </script>
+</body>
+
+</html>
