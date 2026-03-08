@@ -23,6 +23,7 @@ class Footer extends HTMLElement {
                         <a href="/terms-of-service" class="hover:text-kuroza-red transition-colors">Terms of Service</a>
                         <a href="/contact" class="hover:text-kuroza-red transition-colors">Contact</a>
                         <a href="/delete-account" class="hover:text-kuroza-red transition-colors">Account deletion</a>
+                        <a href="/child-safety-standards" class="hover:text-kuroza-red transition-colors">Child safety standards</a>
                     </div>
                     <ul class="flex gap-4 md:flex-col items-center md:items-start justify-center">
                         <li>

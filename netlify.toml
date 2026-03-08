@@ -110,6 +110,11 @@ to = "/terms-of-service.html"
 status = 200
 
 [[redirects]]
+from = "/child-safety-standards"
+to = "/child-safety-standards.html"
+status = 200
+
+[[redirects]]
 from = "/"
 to = "/index.html"
 status = 200
