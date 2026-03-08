@@ -20,19 +20,19 @@ class Footer extends HTMLElement {
                 <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mx-[20vw]">
                     <ul class="flex gap-2 md:flex-col items-center md:items-start justify-center text-gray-600 text-sm">
                         <li>
-                            <a href="https://instagram.com/kurozauk" target="_blank" rel="noopener noreferrer">
+                            <a href="https://instagram.com/kurozauk" target="_blank" rel="noopener noreferrer" class="hover:text-kuroza-red transition-colors">
                                 <i class="fa-brands fa-instagram"></i>
                                 <span class="hidden md:inline-block">Instagram</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://tiktok.com/@kuroza_uk" target="_blank" rel="noopener noreferrer">
+                            <a href="https://tiktok.com/@kuroza_uk" target="_blank" rel="noopener noreferrer" class="hover:text-kuroza-red transition-colors">
                                 <i class="fa-brands fa-tiktok"></i>
                                 <span class="hidden md:inline-block">TikTok</span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://linkedin.com/company/kuroza" target="_blank" rel="noopener noreferrer">
+                            <a href="https://linkedin.com/company/kuroza" target="_blank" rel="noopener noreferrer" class="hover:text-kuroza-red transition-colors">
                                 <i class="fa-brands fa-linkedin-in"></i>
                                 <span class="hidden md:inline-block">LinkedIn</span>
                             </a>
@@ -44,8 +44,8 @@ class Footer extends HTMLElement {
                         <a href="/contact" class="hover:text-kuroza-red transition-colors">Contact</a>
                     </div>
                     <div class="flex flex-col items-center md:items-start justify-center text-gray-600 gap-2 text-sm">
-                        <a href="/delete-account" class="hover:text-kuroza-red transition-colors">Account deletion</a>
-                        <a href="/child-safety-standards" class="hover:text-kuroza-red transition-colors">Child safety standards</a>
+                        <a href="/delete-account" class="hover:text-kuroza-red transition-colors">Account Deletion</a>
+                        <a href="/child-safety-standards" class="hover:text-kuroza-red transition-colors">Child Safety Standards</a>
                         <a href="/modern-slavery-statement" class="hover:text-kuroza-red transition-colors">Modern Slavery Statement</a>
                     </div>
 
